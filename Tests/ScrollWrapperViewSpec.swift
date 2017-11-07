@@ -24,8 +24,27 @@ class ScrollWrapperViewSpec: QuickSpec {
                     sut = ScrollWrapperView()
                 }
 
-                it("should ") {
-                    // TODO:
+                context("set content view") {
+                    var view: UIView!
+
+                    beforeEach {
+                        view = UIView(frame: .zero)
+                        sut.contentView = view
+                    }
+
+                    it("should add content view to scroll view") {
+                        expect(view.superview).to(be(sut.scrollView))
+                    }
+
+                    context("set content view to nil") {
+                        beforeEach {
+                            sut.contentView = nil
+                        }
+
+                        it("should remove previous content view from scroll view") {
+                            expect(view.superview).to(beNil())
+                        }
+                    }
                 }
             }
         }
