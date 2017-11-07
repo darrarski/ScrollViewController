@@ -32,21 +32,29 @@ public class ScrollWrapperView: UIView {
 
     // MARK: Layout
 
-    /// Updates visible content insets
-    ///
-    /// - Parameter insets: visible content insets
-    public func updateVisibleContentInsets(insets: UIEdgeInsets) {
-        visibleContentLayoutGuideTop?.constant = insets.top
-        visibleContentLayoutGuideLeft?.constant = insets.left
-        visibleContentLayoutGuideRight?.constant = -insets.right
-        visibleContentLayoutGuideBottom?.constant = -insets.bottom
+    /// Visible content insets
+    var visibleContentInsets: UIEdgeInsets {
+        get {
+            return UIEdgeInsets(
+                top: visibleContentLayoutGuideTop.constant,
+                left: visibleContentLayoutGuideLeft.constant,
+                bottom: -visibleContentLayoutGuideBottom.constant,
+                right: -visibleContentLayoutGuideRight.constant
+            )
+        }
+        set {
+            visibleContentLayoutGuideTop.constant = newValue.top
+            visibleContentLayoutGuideLeft.constant = newValue.left
+            visibleContentLayoutGuideRight.constant = -newValue.right
+            visibleContentLayoutGuideBottom.constant = -newValue.bottom
+        }
     }
 
     private let visibleContentLayoutGuide = UILayoutGuide()
-    private var visibleContentLayoutGuideTop: NSLayoutConstraint?
-    private var visibleContentLayoutGuideLeft: NSLayoutConstraint?
-    private var visibleContentLayoutGuideRight: NSLayoutConstraint?
-    private var visibleContentLayoutGuideBottom: NSLayoutConstraint?
+    private var visibleContentLayoutGuideTop: NSLayoutConstraint!
+    private var visibleContentLayoutGuideLeft: NSLayoutConstraint!
+    private var visibleContentLayoutGuideRight: NSLayoutConstraint!
+    private var visibleContentLayoutGuideBottom: NSLayoutConstraint!
 
     private func setupLayout() {
         addLayoutGuide(visibleContentLayoutGuide)
@@ -54,10 +62,10 @@ public class ScrollWrapperView: UIView {
         visibleContentLayoutGuideLeft = visibleContentLayoutGuide.leftAnchor.constraint(equalTo: leftAnchor)
         visibleContentLayoutGuideRight = visibleContentLayoutGuide.rightAnchor.constraint(equalTo: rightAnchor)
         visibleContentLayoutGuideBottom = visibleContentLayoutGuide.bottomAnchor.constraint(equalTo: bottomAnchor)
-        visibleContentLayoutGuideTop?.isActive = true
-        visibleContentLayoutGuideLeft?.isActive = true
-        visibleContentLayoutGuideRight?.isActive = true
-        visibleContentLayoutGuideBottom?.isActive = true
+        visibleContentLayoutGuideTop.isActive = true
+        visibleContentLayoutGuideLeft.isActive = true
+        visibleContentLayoutGuideRight.isActive = true
+        visibleContentLayoutGuideBottom.isActive = true
 
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true

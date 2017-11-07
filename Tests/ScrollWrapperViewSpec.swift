@@ -46,6 +46,19 @@ class ScrollWrapperViewSpec: QuickSpec {
                         }
                     }
                 }
+
+                context("set visible content insets") {
+                    var insets: UIEdgeInsets!
+
+                    beforeEach {
+                        insets = UIEdgeInsets(top: 4, left: 3, bottom: 2, right: 1)
+                        sut.visibleContentInsets = insets
+                    }
+
+                    it("should have correct visible content insets") {
+                        expect(sut.visibleContentInsets).to(equal(insets))
+                    }
+                }
             }
         }
     }
