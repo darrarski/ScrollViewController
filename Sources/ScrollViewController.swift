@@ -21,6 +21,17 @@ class ScrollViewController: UIViewController {
         return nil
     }
 
+    // MARK: View
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        keyboardFrameChangeListener.keyboardFrameWillChange = { [unowned self] change in
+            self.scrollViewKeyboardAvoider.handleKeyboardFrameChange(change.frame,
+                                                                     animationDuration: change.animationDuration,
+                                                                     for: UIScrollView()) // TODO:
+        }
+    }
+
     // MARK: Private
 
     private let keyboardFrameChangeListener: KeyboardFrameChangeListening
