@@ -17,6 +17,8 @@ Designed to work on iPhone (including iPhone X) in portrait orientation (should 
 
 ## Install
 
+Minimal deployment target: **iOS 11.0**
+
 You can integrate `ScrollViewController` with your project using [CocoaPods](https://cocoapods.org). Just add this line to your `Podfile`:
 
 ```ruby
