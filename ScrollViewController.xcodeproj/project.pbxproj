@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31A835201FB2168600F351BE /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A8351E1FB2165600F351BE /* ScrollViewController.swift */; };
+		31A835231FB21A2700F351BE /* KeyboardFrameChangeListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */; };
 		31ACE0941FB14079001C4F2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACE0931FB14079001C4F2F /* AppDelegate.swift */; };
 		31ACE0961FB14079001C4F2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACE0951FB14079001C4F2F /* ViewController.swift */; };
 		31ACE09B1FB14079001C4F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31ACE09A1FB14079001C4F2F /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		31A8351E1FB2165600F351BE /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListenerMock.swift; sourceTree = "<group>"; };
 		31ACE0901FB14079001C4F2F /* ScrollViewControllerDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViewControllerDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ACE0931FB14079001C4F2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31ACE0951FB14079001C4F2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				31DFD9D61FB1424F005BF855 /* Info.plist */,
+				31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */,
 				31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */,
 			);
 			path = Tests;
@@ -499,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A835231FB21A2700F351BE /* KeyboardFrameChangeListenerMock.swift in Sources */,
 				31DFD9D51FB1424F005BF855 /* ScrollViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
