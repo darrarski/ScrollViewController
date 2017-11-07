@@ -1,0 +1,21 @@
+PODS:
+  - KeyboardFrameChangeListener (1.0.0)
+  - Nimble (7.0.2)
+  - Quick (1.2.0)
+  - ScrollViewKeyboardAvoider (1.0.0)
+
+DEPENDENCIES:
+  - KeyboardFrameChangeListener (~> 1.0)
+  - Nimble (~> 7.0)
+  - Quick (~> 1.1)
+  - ScrollViewKeyboardAvoider (~> 1.0)
+
+SPEC CHECKSUMS:
+  KeyboardFrameChangeListener: 05bc9e5a0ab19f6648b18e11b577a4f376cca794
+  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  ScrollViewKeyboardAvoider: b8b35784be07e66ed08a59089cc5b55599429bfa
+
+PODFILE CHECKSUM: 4aba74b765e7e72d28bced5e8057bed7d1998a66
+
+COCOAPODS: 1.3.1

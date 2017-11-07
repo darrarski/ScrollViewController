@@ -16,6 +16,9 @@
 		31DFD9C91FB14196005BF855 /* ScrollViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31DFD9D51FB1424F005BF855 /* ScrollViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DFD9D41FB1424F005BF855 /* ScrollViewControllerTests.swift */; };
 		31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
+		3A681207FA5E0DE4CF71E093 /* Pods_ScrollViewControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E6F19F77F6FCD3098E4716 /* Pods_ScrollViewControllerTests.framework */; };
+		592B26DE618200AA8E6706CF /* Pods_ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3952C196434986A8C2697A0 /* Pods_ScrollViewController.framework */; };
+		8BB0A5069748E7604D50E4C9 /* Pods_ScrollViewControllerDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69C17243AD6AC42E9F77B17 /* Pods_ScrollViewControllerDemoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,15 @@
 		31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DFD9D41FB1424F005BF855 /* ScrollViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerTests.swift; sourceTree = "<group>"; };
 		31DFD9D61FB1424F005BF855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46F8C6767465A56785791768 /* Pods-ScrollViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewController/Pods-ScrollViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		6073F62D9717AAFDDDD79C73 /* Pods-ScrollViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerTests/Pods-ScrollViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E4ABB272DD856DF4899F168 /* Pods-ScrollViewControllerDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerDemoApp/Pods-ScrollViewControllerDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A69C17243AD6AC42E9F77B17 /* Pods_ScrollViewControllerDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollViewControllerDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B032ADEA1B801EAB85060ED9 /* Pods-ScrollViewControllerDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerDemoApp/Pods-ScrollViewControllerDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		B0F771878E1CDF25AF82614C /* Pods-ScrollViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerTests/Pods-ScrollViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5130A2BF61641FC300F86D9 /* Pods-ScrollViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewController/Pods-ScrollViewController.release.xcconfig"; sourceTree = "<group>"; };
+		C3952C196434986A8C2697A0 /* Pods_ScrollViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3E6F19F77F6FCD3098E4716 /* Pods_ScrollViewControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollViewControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31DFD9C81FB14196005BF855 /* ScrollViewController.framework in Frameworks */,
+				8BB0A5069748E7604D50E4C9 /* Pods_ScrollViewControllerDemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				592B26DE618200AA8E6706CF /* Pods_ScrollViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,16 +99,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */,
+				3A681207FA5E0DE4CF71E093 /* Pods_ScrollViewControllerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00FA00342123FF7122C9AD1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3952C196434986A8C2697A0 /* Pods_ScrollViewController.framework */,
+				A69C17243AD6AC42E9F77B17 /* Pods_ScrollViewControllerDemoApp.framework */,
+				E3E6F19F77F6FCD3098E4716 /* Pods_ScrollViewControllerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		31ACE0871FB14079001C4F2F = {
 			isa = PBXGroup;
 			children = (
 				31ACE0921FB14079001C4F2F /* DemoApp */,
+				00FA00342123FF7122C9AD1F /* Frameworks */,
+				BD0F9B049433F65654FF3921 /* Pods */,
 				31ACE0911FB14079001C4F2F /* Products */,
 				31DFD9C21FB14196005BF855 /* Sources */,
 				31DFD9D31FB1424F005BF855 /* Tests */,
@@ -141,6 +168,19 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		BD0F9B049433F65654FF3921 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46F8C6767465A56785791768 /* Pods-ScrollViewController.debug.xcconfig */,
+				B5130A2BF61641FC300F86D9 /* Pods-ScrollViewController.release.xcconfig */,
+				7E4ABB272DD856DF4899F168 /* Pods-ScrollViewControllerDemoApp.debug.xcconfig */,
+				B032ADEA1B801EAB85060ED9 /* Pods-ScrollViewControllerDemoApp.release.xcconfig */,
+				6073F62D9717AAFDDDD79C73 /* Pods-ScrollViewControllerTests.debug.xcconfig */,
+				B0F771878E1CDF25AF82614C /* Pods-ScrollViewControllerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -159,10 +199,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31ACE0A21FB14079001C4F2F /* Build configuration list for PBXNativeTarget "ScrollViewControllerDemoApp" */;
 			buildPhases = (
+				01EB97AB5F2715743C538216 /* [CP] Check Pods Manifest.lock */,
 				31ACE08C1FB14079001C4F2F /* Sources */,
 				31ACE08D1FB14079001C4F2F /* Frameworks */,
 				31ACE08E1FB14079001C4F2F /* Resources */,
 				31DFD9CD1FB14196005BF855 /* Embed Frameworks */,
+				685EAF85EC0F82249A5BF805 /* [CP] Embed Pods Frameworks */,
+				43D4AD6C0767F796A88B86E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,10 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31DFD9CA1FB14196005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewController" */;
 			buildPhases = (
+				26E836BD002770891AAE03FD /* [CP] Check Pods Manifest.lock */,
 				31DFD9BC1FB14195005BF855 /* Sources */,
 				31DFD9BD1FB14195005BF855 /* Frameworks */,
 				31DFD9BE1FB14195005BF855 /* Headers */,
 				31DFD9BF1FB14195005BF855 /* Resources */,
+				1BC42A2AC2A1992CA48082B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31DFD9DA1FB1424F005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewControllerTests" */;
 			buildPhases = (
+				84AF8DC8059D6AF034B99DA5 /* [CP] Check Pods Manifest.lock */,
 				31DFD9CE1FB1424F005BF855 /* Sources */,
 				31DFD9CF1FB1424F005BF855 /* Frameworks */,
 				31DFD9D01FB1424F005BF855 /* Resources */,
+				40EEFC21702B9DDF47C5A4AD /* [CP] Embed Pods Frameworks */,
+				C700535131120E85F6E2FAC2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +327,152 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01EB97AB5F2715743C538216 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrollViewControllerDemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BC42A2AC2A1992CA48082B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollViewController/Pods-ScrollViewController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26E836BD002770891AAE03FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrollViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40EEFC21702B9DDF47C5A4AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ScrollViewControllerTests/Pods-ScrollViewControllerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeyboardFrameChangeListener/KeyboardFrameChangeListener.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollViewKeyboardAvoider/ScrollViewKeyboardAvoider.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyboardFrameChangeListener.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollViewKeyboardAvoider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollViewControllerTests/Pods-ScrollViewControllerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43D4AD6C0767F796A88B86E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollViewControllerDemoApp/Pods-ScrollViewControllerDemoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		685EAF85EC0F82249A5BF805 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ScrollViewControllerDemoApp/Pods-ScrollViewControllerDemoApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeyboardFrameChangeListener/KeyboardFrameChangeListener.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollViewKeyboardAvoider/ScrollViewKeyboardAvoider.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyboardFrameChangeListener.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollViewKeyboardAvoider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollViewControllerDemoApp/Pods-ScrollViewControllerDemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84AF8DC8059D6AF034B99DA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrollViewControllerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C700535131120E85F6E2FAC2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollViewControllerTests/Pods-ScrollViewControllerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31ACE08C1FB14079001C4F2F /* Sources */ = {
@@ -441,6 +635,7 @@
 		};
 		31ACE0A31FB14079001C4F2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E4ABB272DD856DF4899F168 /* Pods-ScrollViewControllerDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +650,7 @@
 		};
 		31ACE0A41FB14079001C4F2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B032ADEA1B801EAB85060ED9 /* Pods-ScrollViewControllerDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -469,6 +665,7 @@
 		};
 		31DFD9CB1FB14196005BF855 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46F8C6767465A56785791768 /* Pods-ScrollViewController.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +689,7 @@
 		};
 		31DFD9CC1FB14196005BF855 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5130A2BF61641FC300F86D9 /* Pods-ScrollViewController.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -515,6 +713,7 @@
 		};
 		31DFD9DB1FB1424F005BF855 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6073F62D9717AAFDDDD79C73 /* Pods-ScrollViewControllerTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -528,6 +727,7 @@
 		};
 		31DFD9DC1FB1424F005BF855 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F771878E1CDF25AF82614C /* Pods-ScrollViewControllerTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
