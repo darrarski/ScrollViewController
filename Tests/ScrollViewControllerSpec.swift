@@ -101,6 +101,20 @@ class ScrollViewControllerSpec: QuickSpec {
                             }
                         }
                     }
+
+                    context("scroll view changes adjusted content insets") {
+                        var scrollViewMock: UIScrollViewMock!
+
+                        beforeEach {
+                            scrollViewMock = UIScrollViewMock()
+                            scrollViewMock.mockedAdjustedContentInset = UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4)
+                            sut.scrollViewDidChangeAdjustedContentInset(scrollViewMock)
+                        }
+
+                        it("should update visible content insets") {
+                            expect(wrapperViewSpy.visibleContentInsets).to(equal(scrollViewMock.adjustedContentInset))
+                        }
+                    }
                 }
             }
         }

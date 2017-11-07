@@ -3,7 +3,7 @@ import KeyboardFrameChangeListener
 import ScrollViewKeyboardAvoider
 
 /// Scroll View Controller
-public class ScrollViewController: UIViewController {
+public class ScrollViewController: UIViewController, UIScrollViewDelegate {
 
     /// Create new instance
     ///
@@ -38,6 +38,7 @@ public class ScrollViewController: UIViewController {
     /// Called when view is loaded
     override public func viewDidLoad() {
         super.viewDidLoad()
+        wrapperView.scrollView.delegate = self
         keyboardFrameChangeListener.keyboardFrameWillChange = { [unowned self] change in
             self.scrollViewKeyboardAvoider.handleKeyboardFrameChange(change.frame,
                                                                      animationDuration: change.animationDuration,
@@ -58,6 +59,15 @@ public class ScrollViewController: UIViewController {
 
     private var wrapperView: ScrollWrapperView! {
         return view as? ScrollWrapperView
+    }
+
+    // MARK: UIScrollViewDelegate
+
+    /// Called when UIScrollView changes adjusted content inset
+    ///
+    /// - Parameter scrollView: UIScrollView that changed adjusted content inset
+    public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
+        wrapperView.visibleContentInsets = scrollView.adjustedContentInset
     }
 
     // MARK: Private
