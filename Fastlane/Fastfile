@@ -33,7 +33,7 @@ platform :ios do
 
   desc 'Lint pod'
   lane :pod_lint do
-    sh 'cd .. && bundle exec pod lib lint --private'
+    sh 'cd .. && bundle exec pod lib lint'
   end
 
 end
