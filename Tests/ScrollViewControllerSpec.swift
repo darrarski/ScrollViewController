@@ -23,12 +23,15 @@ class ScrollViewControllerSpec: QuickSpec {
             context("init") {
                 var listenerMock: KeyboardFrameChangeListenerMock!
                 var avoiderSpy: ScrollViewKeyboardAvoiderSpy!
+                var wrapperViewSpy: ScrollWrapperViewSpy!
 
                 beforeEach {
                     listenerMock = KeyboardFrameChangeListenerMock()
                     avoiderSpy = ScrollViewKeyboardAvoiderSpy()
+                    wrapperViewSpy = ScrollWrapperViewSpy()
                     sut = ScrollViewController(keyboardFrameChangeListener: listenerMock,
-                                               scrollViewKeyboardAvoider: avoiderSpy)
+                                               scrollViewKeyboardAvoider: avoiderSpy,
+                                               wrapperViewFactory: { wrapperViewSpy })
                 }
 
                 context("load view") {
@@ -37,7 +40,7 @@ class ScrollViewControllerSpec: QuickSpec {
                     }
 
                     it("should have correct view") {
-                        expect(sut.view).to(beAKindOf(ScrollWrapperView.self))
+                        expect(sut.view).to(be(wrapperViewSpy))
                     }
 
                     context("keyboard frame changes") {
