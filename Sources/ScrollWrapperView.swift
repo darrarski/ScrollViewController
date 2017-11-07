@@ -6,6 +6,8 @@ public class ScrollWrapperView: UIView {
     /// Create wrapper
     public init() {
         super.init(frame: .zero)
+        addSubview(scrollView)
+        setupLayout()
     }
 
     /// Does nothing, class is designed to be used programatically
@@ -29,6 +31,14 @@ public class ScrollWrapperView: UIView {
     }
 
     // MARK: Layout
+
+    private func setupLayout() {
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        scrollView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        scrollView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    }
 
     private func setupLayout(contentView view: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
