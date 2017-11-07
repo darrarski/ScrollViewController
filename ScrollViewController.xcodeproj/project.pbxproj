@@ -14,7 +14,7 @@
 		31DFD9C51FB14196005BF855 /* ScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 31DFD9C31FB14196005BF855 /* ScrollViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31DFD9C81FB14196005BF855 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
 		31DFD9C91FB14196005BF855 /* ScrollViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		31DFD9D51FB1424F005BF855 /* ScrollViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DFD9D41FB1424F005BF855 /* ScrollViewControllerTests.swift */; };
+		31DFD9D51FB1424F005BF855 /* ScrollViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */; };
 		31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
 		3A681207FA5E0DE4CF71E093 /* Pods_ScrollViewControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E6F19F77F6FCD3098E4716 /* Pods_ScrollViewControllerTests.framework */; };
 		592B26DE618200AA8E6706CF /* Pods_ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3952C196434986A8C2697A0 /* Pods_ScrollViewController.framework */; };
@@ -63,7 +63,7 @@
 		31DFD9C31FB14196005BF855 /* ScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		31DFD9C41FB14196005BF855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		31DFD9D41FB1424F005BF855 /* ScrollViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerTests.swift; sourceTree = "<group>"; };
+		31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerSpec.swift; sourceTree = "<group>"; };
 		31DFD9D61FB1424F005BF855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46F8C6767465A56785791768 /* Pods-ScrollViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewController/Pods-ScrollViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		6073F62D9717AAFDDDD79C73 /* Pods-ScrollViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerTests/Pods-ScrollViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				31DFD9D61FB1424F005BF855 /* Info.plist */,
-				31DFD9D41FB1424F005BF855 /* ScrollViewControllerTests.swift */,
+				31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -495,7 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31DFD9D51FB1424F005BF855 /* ScrollViewControllerTests.swift in Sources */,
+				31DFD9D51FB1424F005BF855 /* ScrollViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
