@@ -14,10 +14,19 @@
 		31DFD9C51FB14196005BF855 /* ScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 31DFD9C31FB14196005BF855 /* ScrollViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31DFD9C81FB14196005BF855 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
 		31DFD9C91FB14196005BF855 /* ScrollViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		31DFD9D51FB1424F005BF855 /* ScrollViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DFD9D41FB1424F005BF855 /* ScrollViewControllerTests.swift */; };
+		31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		31DFD9C61FB14196005BF855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31ACE0881FB14079001C4F2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31DFD9C01FB14195005BF855;
+			remoteInfo = ScrollViewController;
+		};
+		31DFD9D81FB1424F005BF855 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 31ACE0881FB14079001C4F2F /* Project object */;
 			proxyType = 1;
@@ -50,6 +59,9 @@
 		31DFD9C11FB14195005BF855 /* ScrollViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScrollViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DFD9C31FB14196005BF855 /* ScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		31DFD9C41FB14196005BF855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31DFD9D41FB1424F005BF855 /* ScrollViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerTests.swift; sourceTree = "<group>"; };
+		31DFD9D61FB1424F005BF855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		31DFD9CF1FB1424F005BF855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +97,7 @@
 				31ACE0921FB14079001C4F2F /* DemoApp */,
 				31ACE0911FB14079001C4F2F /* Products */,
 				31DFD9C21FB14196005BF855 /* Sources */,
+				31DFD9D31FB1424F005BF855 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +106,7 @@
 			children = (
 				31ACE0901FB14079001C4F2F /* ScrollViewControllerDemoApp.app */,
 				31DFD9C11FB14195005BF855 /* ScrollViewController.framework */,
+				31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +130,15 @@
 				31DFD9C31FB14196005BF855 /* ScrollViewController.h */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		31DFD9D31FB1424F005BF855 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				31DFD9D61FB1424F005BF855 /* Info.plist */,
+				31DFD9D41FB1424F005BF855 /* ScrollViewControllerTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +192,24 @@
 			productReference = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		31DFD9D11FB1424F005BF855 /* ScrollViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31DFD9DA1FB1424F005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewControllerTests" */;
+			buildPhases = (
+				31DFD9CE1FB1424F005BF855 /* Sources */,
+				31DFD9CF1FB1424F005BF855 /* Frameworks */,
+				31DFD9D01FB1424F005BF855 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31DFD9D91FB1424F005BF855 /* PBXTargetDependency */,
+			);
+			name = ScrollViewControllerTests;
+			productName = ScrollViewControllerTests;
+			productReference = 31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,6 +225,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					31DFD9C01FB14195005BF855 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					31DFD9D11FB1424F005BF855 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -196,6 +249,7 @@
 			targets = (
 				31ACE08F1FB14079001C4F2F /* ScrollViewControllerDemoApp */,
 				31DFD9C01FB14195005BF855 /* ScrollViewController */,
+				31DFD9D11FB1424F005BF855 /* ScrollViewControllerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +265,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		31DFD9BF1FB14195005BF855 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31DFD9D01FB1424F005BF855 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,6 +297,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		31DFD9CE1FB1424F005BF855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31DFD9D51FB1424F005BF855 /* ScrollViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -243,6 +312,11 @@
 			isa = PBXTargetDependency;
 			target = 31DFD9C01FB14195005BF855 /* ScrollViewController */;
 			targetProxy = 31DFD9C61FB14196005BF855 /* PBXContainerItemProxy */;
+		};
+		31DFD9D91FB1424F005BF855 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31DFD9C01FB14195005BF855 /* ScrollViewController */;
+			targetProxy = 31DFD9D81FB1424F005BF855 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -439,6 +513,32 @@
 			};
 			name = Release;
 		};
+		31DFD9DB1FB1424F005BF855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		31DFD9DC1FB1424F005BF855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -465,6 +565,15 @@
 			buildConfigurations = (
 				31DFD9CB1FB14196005BF855 /* Debug */,
 				31DFD9CC1FB14196005BF855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31DFD9DA1FB1424F005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31DFD9DB1FB1424F005BF855 /* Debug */,
+				31DFD9DC1FB1424F005BF855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
