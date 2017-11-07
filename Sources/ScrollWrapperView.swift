@@ -1,20 +1,25 @@
 import UIKit
 
-class ScrollWrapperView: UIView {
+/// UIScrollView wrapper
+public class ScrollWrapperView: UIView {
 
-    init() {
+    /// Create wrapper
+    public init() {
         super.init(frame: .zero)
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    /// Does nothing, class is designed to be used programatically
+    required public init?(coder aDecoder: NSCoder) {
         return nil
     }
 
     // MARK: Subviews
 
-    let scrollView = Factory.scrollView
+    /// Container UIScrollView
+    public let scrollView = Factory.scrollView
 
-    var contentView: UIView? {
+    /// Scrollable content view
+    public var contentView: UIView? {
         didSet {
             oldValue?.removeFromSuperview()
             guard let newValue = contentView else { return }

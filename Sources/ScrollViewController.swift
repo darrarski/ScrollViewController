@@ -2,32 +2,41 @@ import UIKit
 import KeyboardFrameChangeListener
 import ScrollViewKeyboardAvoider
 
-class ScrollViewController: UIViewController {
+/// Scroll View Controller
+public class ScrollViewController: UIViewController {
 
-    init(keyboardFrameChangeListener: KeyboardFrameChangeListening
-            = KeyboardFrameChangeListener(notificationCenter: NotificationCenter.default),
-         scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding
-            = ScrollViewKeyboardAvoider(animator: { UIView.animate(withDuration: $0, animations: $1) }),
-         wrapperViewFactory: @escaping () -> ScrollWrapperView
-            = { ScrollWrapperView() }
-        ) {
+    /// Create new instance
+    ///
+    /// - Parameters:
+    ///   - keyboardFrameChangeListener: used to observe keybaord frame changes
+    ///   - scrollViewKeyboardAvoider: used to apply keyboard-avoiding insets to UIScrollView
+    ///   - wrapperViewFactory: used to create ScrollWrapperView
+    public init(keyboardFrameChangeListener: KeyboardFrameChangeListening
+                    = KeyboardFrameChangeListener(notificationCenter: NotificationCenter.default),
+                scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding
+                    = ScrollViewKeyboardAvoider(animator: { UIView.animate(withDuration: $0, animations: $1) }),
+                wrapperViewFactory: @escaping () -> ScrollWrapperView
+                    = { ScrollWrapperView() }) {
         self.keyboardFrameChangeListener = keyboardFrameChangeListener
         self.scrollViewKeyboardAvoider = scrollViewKeyboardAvoider
         self.createWrapperView = wrapperViewFactory
         super.init(nibName: nil, bundle: nil)
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    /// Does nothing, class is designed to be used programatically
+    required public init?(coder aDecoder: NSCoder) {
         return nil
     }
 
     // MARK: View
 
-    override func loadView() {
+    /// Loads view
+    override public func loadView() {
         view = createWrapperView()
     }
 
-    override func viewDidLoad() {
+    /// Called when view is loaded
+    override public func viewDidLoad() {
         super.viewDidLoad()
         keyboardFrameChangeListener.keyboardFrameWillChange = { [unowned self] change in
             self.scrollViewKeyboardAvoider.handleKeyboardFrameChange(change.frame,
@@ -36,7 +45,8 @@ class ScrollViewController: UIViewController {
         }
     }
 
-    var contentView: UIView? {
+    /// Scrollable content view
+    public var contentView: UIView? {
         get { return wrapperView.contentView }
         set { wrapperView.contentView = newValue }
     }
