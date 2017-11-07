@@ -1,8 +1,8 @@
 PODS:
-  - KeyboardFrameChangeListener (1.0.0)
+  - KeyboardFrameChangeListener (1.0.1)
   - Nimble (7.0.2)
   - Quick (1.2.0)
-  - ScrollViewKeyboardAvoider (1.0.0)
+  - ScrollViewKeyboardAvoider (1.0.1)
 
 DEPENDENCIES:
   - KeyboardFrameChangeListener (~> 1.0)
@@ -11,10 +11,10 @@ DEPENDENCIES:
   - ScrollViewKeyboardAvoider (~> 1.0)
 
 SPEC CHECKSUMS:
-  KeyboardFrameChangeListener: 05bc9e5a0ab19f6648b18e11b577a4f376cca794
+  KeyboardFrameChangeListener: 461c4526355872fb28b7e0768143c0aa928a23cc
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  ScrollViewKeyboardAvoider: b8b35784be07e66ed08a59089cc5b55599429bfa
+  ScrollViewKeyboardAvoider: 4f30c3ca387213c7e406ba66c97d64c288df6d17
 
 PODFILE CHECKSUM: 4aba74b765e7e72d28bced5e8057bed7d1998a66
 
