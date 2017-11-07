@@ -32,7 +32,15 @@ public class ScrollWrapperView: UIView {
 
     // MARK: Layout
 
+    private let visibleContentLayoutGuide = UILayoutGuide()
+
     private func setupLayout() {
+        addLayoutGuide(visibleContentLayoutGuide)
+        visibleContentLayoutGuide.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        visibleContentLayoutGuide.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        visibleContentLayoutGuide.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        visibleContentLayoutGuide.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         scrollView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
@@ -47,6 +55,7 @@ public class ScrollWrapperView: UIView {
         view.rightAnchor.constraint(equalTo: scrollView.rightAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         view.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+        view.heightAnchor.constraint(greaterThanOrEqualTo: visibleContentLayoutGuide.heightAnchor).isActive = true
     }
 
 }
