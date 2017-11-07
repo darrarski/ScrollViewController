@@ -36,6 +36,11 @@ class ScrollViewController: UIViewController {
         }
     }
 
+    var contentView: UIView? {
+        get { return wrapperView.contentView }
+        set { wrapperView.contentView = newValue }
+    }
+
     private var wrapperView: ScrollWrapperView! {
         return view as? ScrollWrapperView
     }

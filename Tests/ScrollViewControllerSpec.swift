@@ -70,6 +70,37 @@ class ScrollViewControllerSpec: QuickSpec {
                             expect(avoiderSpy.handledKeyboardChanges.first?.2).to(be(wrapperViewSpy.scrollView))
                         }
                     }
+
+                    context("set content view") {
+                        var view: UIView!
+
+                        beforeEach {
+                            view = UIView(frame: .zero)
+                            sut.contentView = view
+                        }
+
+                        it("should have correct content view") {
+                            expect(sut.contentView).to(be(view))
+                        }
+
+                        it("should add content view to wrapper") {
+                            expect(wrapperViewSpy.contentView).to(be(view))
+                        }
+
+                        context("set content view to nil") {
+                            beforeEach {
+                                sut.contentView = nil
+                            }
+
+                            it("should have correct content view") {
+                                expect(sut.contentView).to(beNil())
+                            }
+
+                            it("should remove previous content view from wrapper") {
+                                expect(wrapperViewSpy.contentView).to(beNil())
+                            }
+                        }
+                    }
                 }
             }
         }
