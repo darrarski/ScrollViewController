@@ -9,6 +9,8 @@
 Controls `UIScrollView` so the content is in the right place. Uses [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) to observe keybaord frame changes and then
 adjusts insets using [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider) so the keyboard does not cover the content. Also, makes the content fill visible area (not covered by navigation bar, keyboard etc.).
 
+![ScrollViewController Demo App](Misc/ScrollViewController_DemoApp.gif)
+
 ## Install
 
 You can integrate `ScrollViewController` with your project using [CocoaPods](https://cocoapods.org). Just add this line to your `Podfile`:
