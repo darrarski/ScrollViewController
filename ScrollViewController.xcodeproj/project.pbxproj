@@ -10,6 +10,8 @@
 		31A835201FB2168600F351BE /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A8351E1FB2165600F351BE /* ScrollViewController.swift */; };
 		31A835231FB21A2700F351BE /* KeyboardFrameChangeListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */; };
 		31A835261FB21A4A00F351BE /* ScrollViewKeyboardAvoiderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835241FB21A4700F351BE /* ScrollViewKeyboardAvoiderSpy.swift */; };
+		31A8352A1FB21D4C00F351BE /* ScrollWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835271FB21D2500F351BE /* ScrollWrapperView.swift */; };
+		31A8352D1FB21DEA00F351BE /* ScrollWrapperViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A8352B1FB21D9200F351BE /* ScrollWrapperViewSpec.swift */; };
 		31ACE0941FB14079001C4F2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACE0931FB14079001C4F2F /* AppDelegate.swift */; };
 		31ACE0961FB14079001C4F2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACE0951FB14079001C4F2F /* ViewController.swift */; };
 		31ACE09B1FB14079001C4F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31ACE09A1FB14079001C4F2F /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 		31A8351E1FB2165600F351BE /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListenerMock.swift; sourceTree = "<group>"; };
 		31A835241FB21A4700F351BE /* ScrollViewKeyboardAvoiderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewKeyboardAvoiderSpy.swift; sourceTree = "<group>"; };
+		31A835271FB21D2500F351BE /* ScrollWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollWrapperView.swift; sourceTree = "<group>"; };
+		31A8352B1FB21D9200F351BE /* ScrollWrapperViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollWrapperViewSpec.swift; sourceTree = "<group>"; };
 		31ACE0901FB14079001C4F2F /* ScrollViewControllerDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViewControllerDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ACE0931FB14079001C4F2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31ACE0951FB14079001C4F2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 				31DFD9C41FB14196005BF855 /* Info.plist */,
 				31DFD9C31FB14196005BF855 /* ScrollViewController.h */,
 				31A8351E1FB2165600F351BE /* ScrollViewController.swift */,
+				31A835271FB21D2500F351BE /* ScrollWrapperView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */,
 				31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */,
 				31A835241FB21A4700F351BE /* ScrollViewKeyboardAvoiderSpy.swift */,
+				31A8352B1FB21D9200F351BE /* ScrollWrapperViewSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A835201FB2168600F351BE /* ScrollViewController.swift in Sources */,
+				31A8352A1FB21D4C00F351BE /* ScrollWrapperView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A8352D1FB21DEA00F351BE /* ScrollWrapperViewSpec.swift in Sources */,
 				31A835231FB21A2700F351BE /* KeyboardFrameChangeListenerMock.swift in Sources */,
 				31A835261FB21A4A00F351BE /* ScrollViewKeyboardAvoiderSpy.swift in Sources */,
 				31DFD9D51FB1424F005BF855 /* ScrollViewControllerSpec.swift in Sources */,
