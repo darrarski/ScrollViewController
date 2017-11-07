@@ -5,6 +5,8 @@ class ViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
+        navigationItem.prompt = "ScrollViewController"
+        navigationItem.title = "Demo"
     }
 
     required init?(coder aDecoder: NSCoder) {
