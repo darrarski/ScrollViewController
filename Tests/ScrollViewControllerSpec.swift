@@ -36,6 +36,10 @@ class ScrollViewControllerSpec: QuickSpec {
                         _ = sut.view
                     }
 
+                    it("should have correct view") {
+                        expect(sut.view).to(beAKindOf(ScrollWrapperView.self))
+                    }
+
                     context("keyboard frame changes") {
                         var change: KeyboardFrameChange!
 

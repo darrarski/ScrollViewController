@@ -7,10 +7,13 @@ class ScrollViewController: UIViewController {
     init(keyboardFrameChangeListener: KeyboardFrameChangeListening
             = KeyboardFrameChangeListener(notificationCenter: NotificationCenter.default),
          scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding
-            = ScrollViewKeyboardAvoider(animator: { UIView.animate(withDuration: $0, animations: $1) })
+            = ScrollViewKeyboardAvoider(animator: { UIView.animate(withDuration: $0, animations: $1) }),
+         wrapperViewFactory: @escaping () -> ScrollWrapperView
+            = { ScrollWrapperView() }
         ) {
         self.keyboardFrameChangeListener = keyboardFrameChangeListener
         self.scrollViewKeyboardAvoider = scrollViewKeyboardAvoider
+        self.createWrapperView = wrapperViewFactory
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -19,6 +22,10 @@ class ScrollViewController: UIViewController {
     }
 
     // MARK: View
+
+    override func loadView() {
+        view = createWrapperView()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,5 +40,6 @@ class ScrollViewController: UIViewController {
 
     private let keyboardFrameChangeListener: KeyboardFrameChangeListening
     private let scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding
+    private let createWrapperView: () -> ScrollWrapperView
 
 }
