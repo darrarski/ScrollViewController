@@ -45,6 +45,11 @@ public class ScrollViewController: UIViewController {
         }
     }
 
+    /// Contained UIScrollView
+    public var scrollView: UIScrollView {
+        return wrapperView.scrollView
+    }
+
     /// Scrollable content view
     public var contentView: UIView? {
         get { return wrapperView.contentView }
