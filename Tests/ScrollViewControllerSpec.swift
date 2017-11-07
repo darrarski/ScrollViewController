@@ -67,7 +67,7 @@ class ScrollViewControllerSpec: QuickSpec {
                         }
 
                         it("should handle for correct scroll view") {
-                            expect(avoiderSpy.handledKeyboardChanges.first?.2).notTo(beNil()) // TODO:
+                            expect(avoiderSpy.handledKeyboardChanges.first?.2).to(be(wrapperViewSpy.scrollView))
                         }
                     }
                 }

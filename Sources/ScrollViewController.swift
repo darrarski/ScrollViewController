@@ -32,8 +32,12 @@ class ScrollViewController: UIViewController {
         keyboardFrameChangeListener.keyboardFrameWillChange = { [unowned self] change in
             self.scrollViewKeyboardAvoider.handleKeyboardFrameChange(change.frame,
                                                                      animationDuration: change.animationDuration,
-                                                                     for: UIScrollView()) // TODO:
+                                                                     for: self.wrapperView.scrollView)
         }
+    }
+
+    private var wrapperView: ScrollWrapperView! {
+        return view as? ScrollWrapperView
     }
 
     // MARK: Private
