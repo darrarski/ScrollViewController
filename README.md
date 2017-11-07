@@ -6,10 +6,14 @@
 [![Build Status](https://travis-ci.org/darrarski/ScrollViewController.svg?branch=master)](https://travis-ci.org/darrarski/ScrollViewController)
 [![CocoaPods](https://img.shields.io/cocoapods/v/ScrollViewController.svg)](https://cocoapods.org/pods/ScrollViewController)
 
-Controls `UIScrollView` so the content is in the right place. Uses [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) to observe keybaord frame changes and then
-adjusts insets using [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider) so the keyboard does not cover the content. Also, makes the content fill visible area (not covered by navigation bar, keyboard etc.).
+Wraps your custom view and presents it on the screen in the way it fills visible area (not covered by navigation bar, keyboard etc.). If your custom view is too big, you will be able to scroll the content thanks to embedded `UIScrollView`.
 
 ![ScrollViewController Demo App](Misc/ScrollViewController_DemoApp.gif)
+
+Uses [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) to observe keyboard frame changes and then
+adjusts insets using [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider) so the keyboard does not cover the content. Supports "safe area layout" and makes the content fill visible area.
+
+Designed to work on iPhone (including iPhone X) in portrait orientation (should also support other screen orientations as well as iPad screen).
 
 ## Install
 
