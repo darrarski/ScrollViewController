@@ -6,10 +6,16 @@ class ScrollViewControllerSpec: QuickSpec {
 
     override func spec() {
         describe("ScrollViewController") {
-            let implemented = false
+            var sut: ScrollViewController!
 
-            it("should be implemented") {
-                expect(implemented).to(beTrue())
+            context("init with coder") {
+                beforeEach {
+                    sut = ScrollViewController(coder: NSCoder())
+                }
+
+                it("should be nil") {
+                    expect(sut).to(beNil())
+                }
             }
         }
     }
