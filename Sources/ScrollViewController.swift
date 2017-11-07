@@ -4,6 +4,12 @@ import ScrollViewKeyboardAvoider
 
 class ScrollViewController: UIViewController {
 
+    convenience init() {
+        let listener = KeyboardFrameChangeListener(notificationCenter: NotificationCenter.default)
+        let avoider = ScrollViewKeyboardAvoider(animator: { UIView.animate(withDuration: $0, animations: $1) })
+        self.init(keyboardFrameChangeListener: listener, scrollViewKeyboardAvoider: avoider)
+    }
+
     init(keyboardFrameChangeListener: KeyboardFrameChangeListening,
          scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding) {
         self.keyboardFrameChangeListener = keyboardFrameChangeListener

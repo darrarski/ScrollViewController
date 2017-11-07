@@ -35,6 +35,16 @@ class ScrollViewControllerSpec: QuickSpec {
                     // TODO:
                 }
             }
+
+            context("convenience init") {
+                beforeEach {
+                    sut = ScrollViewController()
+                }
+
+                it("should ") {
+                    // TODO:
+                }
+            }
         }
     }
 
