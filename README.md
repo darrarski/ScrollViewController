@@ -17,7 +17,7 @@ Designed to work on iPhone (including iPhone X) in portrait orientation (should 
 
 ## Install
 
-Minimal deployment target: **iOS 10.0**
+Minimum deployment target: **iOS 10.0** (on **iOS 11** uses Safe Area Layout for iPhone X compatibility)
 
 You can integrate `ScrollViewController` with your project using [CocoaPods](https://cocoapods.org). Just add this line to your `Podfile`:
 
