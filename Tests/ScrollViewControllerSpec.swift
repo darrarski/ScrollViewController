@@ -24,14 +24,20 @@ class ScrollViewControllerSpec: QuickSpec {
                 var listenerMock: KeyboardFrameChangeListenerMock!
                 var avoiderSpy: ScrollViewKeyboardAvoiderSpy!
                 var wrapperViewSpy: ScrollWrapperViewSpy!
+                var didAnimateWithDuration: TimeInterval?
 
                 beforeEach {
                     listenerMock = KeyboardFrameChangeListenerMock()
                     avoiderSpy = ScrollViewKeyboardAvoiderSpy()
                     wrapperViewSpy = ScrollWrapperViewSpy()
+                    let animatorSpy: ScrollViewController.Animator = { duration, animations in
+                        didAnimateWithDuration = duration
+                        animations()
+                    }
                     sut = ScrollViewController(keyboardFrameChangeListener: listenerMock,
                                                scrollViewKeyboardAvoider: avoiderSpy,
-                                               wrapperViewFactory: { wrapperViewSpy })
+                                               wrapperViewFactory: { wrapperViewSpy },
+                                               animator: animatorSpy)
                 }
 
                 context("load view") {
@@ -73,6 +79,14 @@ class ScrollViewControllerSpec: QuickSpec {
                         it("should handle for correct scroll view") {
                             expect(avoiderSpy.handledKeyboardChanges.first?.2).to(be(wrapperViewSpy.scrollView))
                         }
+
+                        it("should animate with correct duration") {
+                            expect(didAnimateWithDuration).to(equal(change.animationDuration))
+                        }
+
+                        it("should animate layout") {
+                            expect(wrapperViewSpy.didCallLayoutIfNeeded).to(beTrue())
+                        }
                     }
 
                     context("set content view") {
@@ -106,17 +120,30 @@ class ScrollViewControllerSpec: QuickSpec {
                         }
                     }
 
-                    context("scroll view changes adjusted content insets") {
-                        var scrollViewMock: UIScrollViewMock!
+                    if #available(iOS 11.0, *) {
+                        context("scroll view changes adjusted content insets") {
+                            var scrollViewMock: UIScrollViewMock!
 
+                            beforeEach {
+                                scrollViewMock = UIScrollViewMock()
+                                scrollViewMock.mockedAdjustedContentInset = UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4)
+                                sut.scrollViewDidChangeAdjustedContentInset(scrollViewMock)
+                            }
+
+                            it("should update visible content insets") {
+                                expect(wrapperViewSpy.visibleContentInsets).to(equal(scrollViewMock.adjustedContentInset))
+                            }
+                        }
+                    }
+
+                    context("view did layout subviews") {
                         beforeEach {
-                            scrollViewMock = UIScrollViewMock()
-                            scrollViewMock.mockedAdjustedContentInset = UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4)
-                            sut.scrollViewDidChangeAdjustedContentInset(scrollViewMock)
+                            wrapperViewSpy.scrollView.contentInset = UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4)
+                            sut.viewDidLayoutSubviews()
                         }
 
                         it("should update visible content insets") {
-                            expect(wrapperViewSpy.visibleContentInsets).to(equal(scrollViewMock.adjustedContentInset))
+                            expect(wrapperViewSpy.visibleContentInsets).to(equal(wrapperViewSpy.scrollView.contentInset))
                         }
                     }
                 }

@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source                = { :git => 'https://github.com/darrarski/ScrollViewController.git', 
                               :tag => "v#{s.version}" }
   s.platform              = :ios
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '10.0'
   s.source_files          = 'Sources'
   s.requires_arc          = true
   s.frameworks            = 'UIKit'

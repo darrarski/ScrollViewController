@@ -2,7 +2,7 @@
 
 ![Platform](https://img.shields.io/badge/platform-iOS-333333.svg)
 ![Swift v4.0](https://img.shields.io/badge/swift-v4.0-orange.svg)
-![Code Coverage](https://img.shields.io/badge/coverage-98%25-green.svg)
+![Code Coverage](https://img.shields.io/badge/coverage-97%25-green.svg)
 [![Build Status](https://travis-ci.org/darrarski/ScrollViewController.svg?branch=master)](https://travis-ci.org/darrarski/ScrollViewController)
 [![CocoaPods](https://img.shields.io/cocoapods/v/ScrollViewController.svg)](https://cocoapods.org/pods/ScrollViewController)
 
@@ -17,7 +17,7 @@ Designed to work on iPhone (including iPhone X) in portrait orientation (should 
 
 ## Install
 
-Minimal deployment target: **iOS 11.0**
+Minimal deployment target: **iOS 10.0**
 
 You can integrate `ScrollViewController` with your project using [CocoaPods](https://cocoapods.org). Just add this line to your `Podfile`:
 
