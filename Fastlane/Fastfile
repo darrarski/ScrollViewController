@@ -15,6 +15,9 @@ platform :ios do
     else
       puts 'Skipping pod install, the sandbox is in sync with the Podfile.lock'
     end
+
+    puts 'Bootstraping Carthage'
+    sh 'cd .. && carthage bootstrap'
   end
 
   desc 'Run unit tests'
