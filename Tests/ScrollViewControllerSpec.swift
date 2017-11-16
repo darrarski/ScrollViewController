@@ -1,8 +1,8 @@
 import Quick
 import Nimble
+import KeyboardFrameChangeListener
+import ScrollViewKeyboardAvoider
 @testable import ScrollViewController
-@testable import KeyboardFrameChangeListener
-@testable import ScrollViewKeyboardAvoider
 
 class ScrollViewControllerSpec: QuickSpec {
 

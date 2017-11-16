@@ -1,4 +1,4 @@
-@testable import ScrollViewKeyboardAvoider
+import ScrollViewKeyboardAvoider
 
 class ScrollViewKeyboardAvoiderSpy: ScrollViewKeyboardAvoiding {
 
