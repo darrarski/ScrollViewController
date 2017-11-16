@@ -24,6 +24,8 @@
 		31DFD9C91FB14196005BF855 /* ScrollViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31DFD9D51FB1424F005BF855 /* ScrollViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */; };
 		31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
+		31E8198D1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; };
+		31E8198E1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; };
 		3A681207FA5E0DE4CF71E093 /* Pods_ScrollViewControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E6F19F77F6FCD3098E4716 /* Pods_ScrollViewControllerTests.framework */; };
 		8BB0A5069748E7604D50E4C9 /* Pods_ScrollViewControllerDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69C17243AD6AC42E9F77B17 /* Pods_ScrollViewControllerDemoApp.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +82,10 @@
 		31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerSpec.swift; sourceTree = "<group>"; };
 		31DFD9D61FB1424F005BF855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31E819891FBD118600AC267D /* KeyboardFrameChangeListener.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeyboardFrameChangeListener.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31E8198A1FBD118600AC267D /* ScrollViewKeyboardAvoider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ScrollViewKeyboardAvoider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScrollViewKeyboardAvoider.framework; path = Carthage/Build/iOS/ScrollViewKeyboardAvoider.framework; sourceTree = "<group>"; };
+		31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeyboardFrameChangeListener.framework; path = Carthage/Build/iOS/KeyboardFrameChangeListener.framework; sourceTree = "<group>"; };
 		6073F62D9717AAFDDDD79C73 /* Pods-ScrollViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerTests/Pods-ScrollViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E4ABB272DD856DF4899F168 /* Pods-ScrollViewControllerDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerDemoApp/Pods-ScrollViewControllerDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A69C17243AD6AC42E9F77B17 /* Pods_ScrollViewControllerDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollViewControllerDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31E8198D1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework in Frameworks */,
+				31E8198E1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,9 +129,13 @@
 		00FA00342123FF7122C9AD1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31E819891FBD118600AC267D /* KeyboardFrameChangeListener.framework */,
+				31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */,
 				C3952C196434986A8C2697A0 /* Pods_ScrollViewController.framework */,
 				A69C17243AD6AC42E9F77B17 /* Pods_ScrollViewControllerDemoApp.framework */,
 				E3E6F19F77F6FCD3098E4716 /* Pods_ScrollViewControllerTests.framework */,
+				31E8198A1FBD118600AC267D /* ScrollViewKeyboardAvoider.framework */,
+				31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -243,6 +255,8 @@
 				31DFD9BD1FB14195005BF855 /* Frameworks */,
 				31DFD9BE1FB14195005BF855 /* Headers */,
 				31DFD9BF1FB14195005BF855 /* Resources */,
+				31E819901FBD126000AC267D /* Carthage - Check Updates */,
+				31E819911FBD126C00AC267D /* Carthage - Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -362,6 +376,38 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		31E819901FBD126000AC267D /* Carthage - Check Updates */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage - Check Updates";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings";
+		};
+		31E819911FBD126C00AC267D /* Carthage - Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/KeyboardFrameChangeListener.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ScrollViewKeyboardAvoider.framework",
+			);
+			name = "Carthage - Copy Frameworks";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KeyboardFrameChangeListener.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ScrollViewKeyboardAvoider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		40EEFC21702B9DDF47C5A4AD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -666,6 +712,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -689,6 +739,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
