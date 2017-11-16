@@ -1,0 +1,2 @@
+github "darrarski/KeyboardFrameChangeListener" ~> 1.0
+github "darrarski/ScrollViewKeyboardAvoider" ~> 1.0
