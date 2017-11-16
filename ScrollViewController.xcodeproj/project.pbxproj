@@ -25,7 +25,6 @@
 		31DFD9D51FB1424F005BF855 /* ScrollViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */; };
 		31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
 		3A681207FA5E0DE4CF71E093 /* Pods_ScrollViewControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E6F19F77F6FCD3098E4716 /* Pods_ScrollViewControllerTests.framework */; };
-		592B26DE618200AA8E6706CF /* Pods_ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3952C196434986A8C2697A0 /* Pods_ScrollViewController.framework */; };
 		8BB0A5069748E7604D50E4C9 /* Pods_ScrollViewControllerDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69C17243AD6AC42E9F77B17 /* Pods_ScrollViewControllerDemoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,13 +80,11 @@
 		31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerSpec.swift; sourceTree = "<group>"; };
 		31DFD9D61FB1424F005BF855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46F8C6767465A56785791768 /* Pods-ScrollViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewController/Pods-ScrollViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		6073F62D9717AAFDDDD79C73 /* Pods-ScrollViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerTests/Pods-ScrollViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E4ABB272DD856DF4899F168 /* Pods-ScrollViewControllerDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerDemoApp/Pods-ScrollViewControllerDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A69C17243AD6AC42E9F77B17 /* Pods_ScrollViewControllerDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollViewControllerDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B032ADEA1B801EAB85060ED9 /* Pods-ScrollViewControllerDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerDemoApp/Pods-ScrollViewControllerDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		B0F771878E1CDF25AF82614C /* Pods-ScrollViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewControllerTests/Pods-ScrollViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
-		B5130A2BF61641FC300F86D9 /* Pods-ScrollViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewController/Pods-ScrollViewController.release.xcconfig"; sourceTree = "<group>"; };
 		C3952C196434986A8C2697A0 /* Pods_ScrollViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E6F19F77F6FCD3098E4716 /* Pods_ScrollViewControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollViewControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				592B26DE618200AA8E6706CF /* Pods_ScrollViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,8 +191,6 @@
 		BD0F9B049433F65654FF3921 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				46F8C6767465A56785791768 /* Pods-ScrollViewController.debug.xcconfig */,
-				B5130A2BF61641FC300F86D9 /* Pods-ScrollViewController.release.xcconfig */,
 				7E4ABB272DD856DF4899F168 /* Pods-ScrollViewControllerDemoApp.debug.xcconfig */,
 				B032ADEA1B801EAB85060ED9 /* Pods-ScrollViewControllerDemoApp.release.xcconfig */,
 				6073F62D9717AAFDDDD79C73 /* Pods-ScrollViewControllerTests.debug.xcconfig */,
@@ -245,12 +239,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31DFD9CA1FB14196005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewController" */;
 			buildPhases = (
-				26E836BD002770891AAE03FD /* [CP] Check Pods Manifest.lock */,
 				31DFD9BC1FB14195005BF855 /* Sources */,
 				31DFD9BD1FB14195005BF855 /* Frameworks */,
 				31DFD9BE1FB14195005BF855 /* Headers */,
 				31DFD9BF1FB14195005BF855 /* Resources */,
-				1BC42A2AC2A1992CA48082B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,39 +357,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ScrollViewControllerDemoApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1BC42A2AC2A1992CA48082B2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollViewController/Pods-ScrollViewController-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		26E836BD002770891AAE03FD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ScrollViewController-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -699,7 +658,6 @@
 		};
 		31DFD9CB1FB14196005BF855 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46F8C6767465A56785791768 /* Pods-ScrollViewController.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -723,7 +681,6 @@
 		};
 		31DFD9CC1FB14196005BF855 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5130A2BF61641FC300F86D9 /* Pods-ScrollViewController.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

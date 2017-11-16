@@ -12,10 +12,6 @@ target 'ScrollViewControllerDemoApp' do
   pod_dependencies
 end
 
-target 'ScrollViewController' do
-  pod_dependencies
-end
-
 target 'ScrollViewControllerTests' do
   pod_dependencies
   pod 'Quick', '~> 1.1'
