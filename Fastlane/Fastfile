@@ -2,19 +2,14 @@ fastlane_version '2.63.0'
 default_platform :ios
 
 UNIT_TEST_SCHEME = 'Tests'
-XC_WORKSPACE = 'ScrollViewController.xcworkspace'
+XC_PROJECT = 'ScrollViewController.xcodeproj'
 
 platform :ios do
 
   desc 'Bootstrap project'
   lane :setup do
-    system 'diff ../Podfile.lock ../Pods/Manifest.lock > /dev/null'
-    if $?.exitstatus != 0 then
-      puts 'The sandbox is not in sync with the Podfile.lock, installing pods'
-      sh 'cd .. && bundle exec pod install --repo-update'
-    else
-      puts 'Skipping pod install, the sandbox is in sync with the Podfile.lock'
-    end
+    puts 'Bootstraping Carthage'
+    sh 'cd .. && carthage bootstrap --platform iOS'
   end
 
   desc 'Run unit tests'
@@ -22,7 +17,7 @@ platform :ios do
     sh [
       'cd .. && set -o pipefail &&',
       'xcodebuild test',
-      "-workspace #{XC_WORKSPACE}",
+      "-project #{XC_PROJECT}",
       "-scheme #{UNIT_TEST_SCHEME}",
       '-sdk iphonesimulator',
       '-destination \'platform=iOS Simulator,name=iPhone 8,OS=latest\'',

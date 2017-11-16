@@ -1,4 +1,4 @@
-@testable import KeyboardFrameChangeListener
+import KeyboardFrameChangeListener
 
 class KeyboardFrameChangeListenerMock: KeyboardFrameChangeListening {
 

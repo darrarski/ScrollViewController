@@ -19,11 +19,23 @@ Designed to work on iPhone (including iPhone X) in portrait orientation (should 
 
 Minimum deployment target: **iOS 10.0** (on **iOS 11** uses Safe Area Layout for iPhone X compatibility)
 
+### CocoaPods
+
 You can integrate `ScrollViewController` with your project using [CocoaPods](https://cocoapods.org). Just add this line to your `Podfile`:
 
 ```ruby
 pod 'ScrollViewController', '~> 1.0'
 ```
+
+### Carthage
+
+You can also use [Carthage](https://github.com/Carthage/Carthage) if you prefer by adding following line to your `Cartfile`:
+
+```
+github "darrarski/ScrollViewController" ~> 1.0
+```
+
+`ScrollViewController` depends on [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) and [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider). Dependencies will be automatically resolved by Carthage, but you will have to integrate dependent frameworks with your app as well. For more information refer to [Carthage docs](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).
 
 ## Use
 
@@ -42,6 +54,7 @@ scrollViewController.contentView = yourContentView
 
 Requirements: 
 
+- [Carthage](https://github.com/Carthage/Carthage)
 - Ruby with [Bundler](http://bundler.io)
 - Xcode 9
 
