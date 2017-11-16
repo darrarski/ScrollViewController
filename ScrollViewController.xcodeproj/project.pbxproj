@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3102D52D1FBD1F79000BAE7A /* KeyboardFrameChangeListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; };
+		3102D52E1FBD1F79000BAE7A /* ScrollViewKeyboardAvoider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; };
+		3102D52F1FBD1F9D000BAE7A /* KeyboardFrameChangeListener.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3102D5301FBD1F9D000BAE7A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E819991FBD1C9500AC267D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3102D5311FBD1F9D000BAE7A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E819981FBD1C9500AC267D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3102D5321FBD1F9D000BAE7A /* ScrollViewKeyboardAvoider.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31A835201FB2168600F351BE /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A8351E1FB2165600F351BE /* ScrollViewController.swift */; };
 		31A835231FB21A2700F351BE /* KeyboardFrameChangeListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */; };
 		31A835261FB21A4A00F351BE /* ScrollViewKeyboardAvoiderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835241FB21A4700F351BE /* ScrollViewKeyboardAvoiderSpy.swift */; };
@@ -26,6 +32,8 @@
 		31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
 		31E8198D1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; };
 		31E8198E1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; };
+		31E8199A1FBD1C9500AC267D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819981FBD1C9500AC267D /* Quick.framework */; };
+		31E8199B1FBD1C9500AC267D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819991FBD1C9500AC267D /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +65,19 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		31E870851FBD1E8F00BF554E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3102D52F1FBD1F9D000BAE7A /* KeyboardFrameChangeListener.framework in CopyFiles */,
+				3102D5301FBD1F9D000BAE7A /* Nimble.framework in CopyFiles */,
+				3102D5311FBD1F9D000BAE7A /* Quick.framework in CopyFiles */,
+				3102D5321FBD1F9D000BAE7A /* ScrollViewKeyboardAvoider.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +105,8 @@
 		31E8198A1FBD118600AC267D /* ScrollViewKeyboardAvoider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ScrollViewKeyboardAvoider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScrollViewKeyboardAvoider.framework; path = Carthage/Build/iOS/ScrollViewKeyboardAvoider.framework; sourceTree = "<group>"; };
 		31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeyboardFrameChangeListener.framework; path = Carthage/Build/iOS/KeyboardFrameChangeListener.framework; sourceTree = "<group>"; };
+		31E819981FBD1C9500AC267D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		31E819991FBD1C9500AC267D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +132,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */,
+				3102D52D1FBD1F79000BAE7A /* KeyboardFrameChangeListener.framework in Frameworks */,
+				3102D52E1FBD1F79000BAE7A /* ScrollViewKeyboardAvoider.framework in Frameworks */,
+				31E8199A1FBD1C9500AC267D /* Quick.framework in Frameworks */,
+				31E8199B1FBD1C9500AC267D /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +147,8 @@
 			children = (
 				31E819891FBD118600AC267D /* KeyboardFrameChangeListener.framework */,
 				31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */,
+				31E819991FBD1C9500AC267D /* Nimble.framework */,
+				31E819981FBD1C9500AC267D /* Quick.framework */,
 				31E8198A1FBD118600AC267D /* ScrollViewKeyboardAvoider.framework */,
 				31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */,
 			);
@@ -245,6 +274,7 @@
 				31DFD9CE1FB1424F005BF855 /* Sources */,
 				31DFD9CF1FB1424F005BF855 /* Frameworks */,
 				31DFD9D01FB1424F005BF855 /* Resources */,
+				31E870851FBD1E8F00BF554E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -617,6 +647,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewControllerTests;
@@ -631,6 +665,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewControllerTests;
