@@ -13,6 +13,10 @@
 		3102D5301FBD1F9D000BAE7A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E819991FBD1C9500AC267D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3102D5311FBD1F9D000BAE7A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E819981FBD1C9500AC267D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3102D5321FBD1F9D000BAE7A /* ScrollViewKeyboardAvoider.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3199C5251FBD2E9C000666ED /* KeyboardFrameChangeListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; };
+		3199C5261FBD2E9C000666ED /* KeyboardFrameChangeListener.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3199C5271FBD2E9C000666ED /* ScrollViewKeyboardAvoider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; };
+		3199C5281FBD2E9C000666ED /* ScrollViewKeyboardAvoider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31A835201FB2168600F351BE /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A8351E1FB2165600F351BE /* ScrollViewController.swift */; };
 		31A835231FB21A2700F351BE /* KeyboardFrameChangeListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */; };
 		31A835261FB21A4A00F351BE /* ScrollViewKeyboardAvoiderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835241FB21A4700F351BE /* ScrollViewKeyboardAvoiderSpy.swift */; };
@@ -61,6 +65,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				31DFD9C91FB14196005BF855 /* ScrollViewController.framework in Embed Frameworks */,
+				3199C5281FBD2E9C000666ED /* ScrollViewKeyboardAvoider.framework in Embed Frameworks */,
+				3199C5261FBD2E9C000666ED /* KeyboardFrameChangeListener.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +121,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				31DFD9C81FB14196005BF855 /* ScrollViewController.framework in Frameworks */,
+				3199C5271FBD2E9C000666ED /* ScrollViewKeyboardAvoider.framework in Frameworks */,
+				3199C5251FBD2E9C000666ED /* KeyboardFrameChangeListener.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +572,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewControllerDemoApp;
@@ -579,6 +591,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewControllerDemoApp;
