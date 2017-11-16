@@ -8,6 +8,8 @@ platform :ios do
 
   desc 'Bootstrap project'
   lane :setup do
+    puts 'Updating CocoaPods spec-repo'
+    sh 'cd .. && bundle exec pod repo update'
     puts 'Bootstraping Carthage'
     sh 'cd .. && carthage bootstrap --platform iOS'
   end
