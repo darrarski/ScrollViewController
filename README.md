@@ -79,6 +79,13 @@ To run tests from command line execute:
 bundle exec fastlane test
 ```
 
+To generate and open test coverage report in HTML format, run:
+
+```sh
+bundle exec fastlane coverage
+```
+
+
 ## License
 
 MIT License - check out [LICENSE](LICENSE) file.
