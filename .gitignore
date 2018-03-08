@@ -48,3 +48,10 @@ Secrets/*
 
 ## Keep
 !.gitkeep
+
+## Slather
+coverage_report/
+cobertura.xml
+
+## CodeClimate
+cc-test-reporter
