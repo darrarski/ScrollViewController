@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'ScrollViewController'
-  s.version               = '1.0.4'
+  s.version               = '1.0.5'
   s.summary               = 'Controls UIScrollView so the content is in the right place'
   s.homepage              = 'https://github.com/darrarski/ScrollViewController'
   s.author                = { 'Dariusz Rybicki' => 'darrarski@gmail.com' }
