@@ -72,7 +72,8 @@ public class ScrollViewController: UIViewController, UIScrollViewDelegate {
         set { wrapperView.contentView = newValue }
     }
 
-    private var wrapperView: ScrollWrapperView! {
+    /// Main view of this view controller (non-scrollable)
+    public var wrapperView: ScrollWrapperView! {
         return view as? ScrollWrapperView
     }
 
