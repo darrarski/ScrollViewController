@@ -33,7 +33,7 @@ public class ScrollWrapperView: UIView {
     // MARK: Layout
 
     /// Visible content insets
-    var visibleContentInsets: UIEdgeInsets {
+    public var visibleContentInsets: UIEdgeInsets {
         get {
             return UIEdgeInsets(
                 top: visibleContentLayoutGuideTop.constant,
