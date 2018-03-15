@@ -50,7 +50,9 @@ public class ScrollWrapperView: UIView {
         }
     }
 
-    private let visibleContentLayoutGuide = UILayoutGuide()
+    // Visible content layout guide
+    public let visibleContentLayoutGuide = UILayoutGuide()
+
     private var visibleContentLayoutGuideTop: NSLayoutConstraint!
     private var visibleContentLayoutGuideLeft: NSLayoutConstraint!
     private var visibleContentLayoutGuideRight: NSLayoutConstraint!
