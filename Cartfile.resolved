@@ -1,4 +1,4 @@
 github "Quick/Nimble" "v7.0.3"
 github "Quick/Quick" "v1.2.0"
 github "darrarski/KeyboardFrameChangeListener" "v1.0.3"
-github "darrarski/ScrollViewKeyboardAvoider" "v1.0.4"
+github "darrarski/ScrollViewKeyboardAvoider" "v1.0.5"
