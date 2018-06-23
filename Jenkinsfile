@@ -7,6 +7,11 @@ pipeline {
 bundle install'''
         sh '''#!/bin/sh
 bundle exec fastlane setup'''
+        sh '''#!/bin/bash
+
+whoami
+
+which rvm'''
       }
     }
     stage('Test') {
