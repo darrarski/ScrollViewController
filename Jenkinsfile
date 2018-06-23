@@ -3,15 +3,17 @@ pipeline {
   stages {
     stage('Setup') {
       steps {
+        sh '''#!/bin/bash -xl
+
+whoami
+
+which rvm
+
+which bundle'''
         sh '''#!/bin/sh
 bundle install'''
         sh '''#!/bin/sh
 bundle exec fastlane setup'''
-        sh '''#!/bin/bash
-
-whoami
-
-which rvm'''
       }
     }
     stage('Test') {
