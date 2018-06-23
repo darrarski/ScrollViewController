@@ -3,8 +3,10 @@ pipeline {
   stages {
     stage('Setup') {
       steps {
-        sh 'bundle install'
-        sh 'bundle exec fastlane setup'
+        sh '''#!/bin/sh
+bundle install'''
+        sh '''#!/bin/sh
+bundle exec fastlane setup'''
       }
     }
     stage('Test') {
