@@ -66,7 +66,9 @@ public class ScrollWrapperView: UIView {
         visibleContentLayoutGuideBottom = visibleContentLayoutGuide.bottomAnchor.constraint(equalTo: bottomAnchor)
         visibleContentLayoutGuideTop.isActive = true
         visibleContentLayoutGuideLeft.isActive = true
+        visibleContentLayoutGuideRight.priority = .defaultHigh
         visibleContentLayoutGuideRight.isActive = true
+        visibleContentLayoutGuideBottom.priority = .defaultHigh
         visibleContentLayoutGuideBottom.isActive = true
 
         scrollView.translatesAutoresizingMaskIntoConstraints = false
