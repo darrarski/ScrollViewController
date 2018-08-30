@@ -51,6 +51,18 @@ platform :ios do
     )
   end
 
+  desc 'Generate test coverage report in HTML format'
+  lane :coverage_html do
+    slather(
+      proj: XC_PROJECT,
+      scheme: TESTS_SCHEME,
+      html: true,
+      show: false,
+      output_directory: 'coverage_report',
+      verbose: true
+    )
+  end
+
   desc 'Generate test coverage report in Cobertura XML format'
   lane :coverage_xml do
     slather(
