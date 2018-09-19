@@ -8,15 +8,15 @@
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "NO"
+            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "31DFD9C01FB14195005BF855"
-               BuildableName = "ScrollViewController.framework"
-               BlueprintName = "ScrollViewController"
+               BlueprintIdentifier = "31DFD9D11FB1424F005BF855"
+               BuildableName = "ScrollViewControllerTests.xctest"
+               BlueprintName = "ScrollViewControllerTests"
                ReferencedContainer = "container:ScrollViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -24,10 +24,20 @@
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "31DFD9D11FB1424F005BF855"
+            BuildableName = "ScrollViewControllerTests.xctest"
+            BlueprintName = "ScrollViewControllerTests"
+            ReferencedContainer = "container:ScrollViewController.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -40,15 +50,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "31DFD9C01FB14195005BF855"
-            BuildableName = "ScrollViewController.framework"
-            BlueprintName = "ScrollViewController"
-            ReferencedContainer = "container:ScrollViewController.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -62,6 +63,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "31DFD9D11FB1424F005BF855"
+            BuildableName = "ScrollViewControllerTests.xctest"
+            BlueprintName = "ScrollViewControllerTests"
+            ReferencedContainer = "container:ScrollViewController.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -71,6 +81,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "31DFD9D11FB1424F005BF855"
+            BuildableName = "ScrollViewControllerTests.xctest"
+            BlueprintName = "ScrollViewControllerTests"
+            ReferencedContainer = "container:ScrollViewController.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
