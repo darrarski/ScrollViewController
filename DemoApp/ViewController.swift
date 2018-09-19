@@ -32,14 +32,14 @@ class ViewController: UIViewController {
     private let scrollViewController = ScrollViewController()
 
     private func embed(_ viewController: UIViewController) {
-        addChildViewController(viewController)
+        addChild(viewController)
         view.addSubview(viewController.view)
         viewController.view.translatesAutoresizingMaskIntoConstraints = false
         viewController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         viewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         viewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         viewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        viewController.didMove(toParentViewController: self)
+        viewController.didMove(toParent: self)
     }
 
 }
