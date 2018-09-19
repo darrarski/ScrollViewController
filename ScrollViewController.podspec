@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'ScrollViewController'
-  s.version               = '1.0.8'
+  s.version               = '1.0.9'
   s.summary               = 'Controls UIScrollView so the content is in the right place'
   s.homepage              = 'https://github.com/darrarski/ScrollViewController'
   s.author                = { 'Dariusz Rybicki' => 'darrarski@gmail.com' }
@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
                               :tag => "v#{s.version}" }
   s.platform              = :ios
   s.ios.deployment_target = '10.0'
+  s.swift_version         = '4.2'
   s.source_files          = 'Sources'
   s.requires_arc          = true
   s.frameworks            = 'UIKit'
