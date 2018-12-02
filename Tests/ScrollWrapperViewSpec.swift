@@ -24,6 +24,10 @@ class ScrollWrapperViewSpec: QuickSpec {
                     sut = ScrollWrapperView()
                 }
 
+                it("should have content view stretching enabled") {
+                    expect(sut.contentViewStretching) == true
+                }
+
                 context("set content view") {
                     var view: UIView!
 
@@ -70,9 +74,9 @@ class ScrollWrapperViewSpec: QuickSpec {
                         sut.contentView = view
                     }
 
-                    context("with content view upsizing") {
+                    context("with content view stretching enabled") {
                         beforeEach {
-                            sut.contentViewUpsizing = true
+                            sut.contentViewStretching = true
                             sut.layoutIfNeeded()
                         }
 
@@ -81,9 +85,9 @@ class ScrollWrapperViewSpec: QuickSpec {
                         }
                     }
 
-                    context("without content view upsizing") {
+                    context("without content view stretching disabled") {
                         beforeEach {
-                            sut.contentViewUpsizing = false
+                            sut.contentViewStretching = false
                             sut.layoutIfNeeded()
                         }
 
@@ -103,9 +107,9 @@ class ScrollWrapperViewSpec: QuickSpec {
                         sut.contentView = view
                     }
 
-                    context("with content view upsizing") {
+                    context("with content view stretching enabled") {
                         beforeEach {
-                            sut.contentViewUpsizing = true
+                            sut.contentViewStretching = true
                             sut.layoutIfNeeded()
                         }
 
@@ -114,9 +118,9 @@ class ScrollWrapperViewSpec: QuickSpec {
                         }
                     }
 
-                    context("without content view upsizing") {
+                    context("without content view stretching disabled") {
                         beforeEach {
-                            sut.contentViewUpsizing = false
+                            sut.contentViewStretching = false
                             sut.layoutIfNeeded()
                         }
 

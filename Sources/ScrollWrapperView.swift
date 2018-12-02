@@ -53,9 +53,9 @@ public class ScrollWrapperView: UIView {
     // Visible content layout guide
     public let visibleContentLayoutGuide = UILayoutGuide()
 
-    // If true (default), contentView will be upsized to fill visible space
-    public var contentViewUpsizing = true {
-        didSet { contentViewHeight?.isActive = contentViewUpsizing }
+    // If true (default), contentView will be stretched to fill visible space
+    public var contentViewStretching = true {
+        didSet { contentViewHeight?.isActive = contentViewStretching }
     }
 
     private var visibleContentLayoutGuideTop: NSLayoutConstraint!
@@ -92,7 +92,7 @@ public class ScrollWrapperView: UIView {
         view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         view.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
         contentViewHeight = view.heightAnchor.constraint(greaterThanOrEqualTo: visibleContentLayoutGuide.heightAnchor)
-        contentViewHeight?.isActive = contentViewUpsizing
+        contentViewHeight?.isActive = contentViewStretching
     }
 
 }
