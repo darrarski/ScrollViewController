@@ -53,10 +53,16 @@ public class ScrollWrapperView: UIView {
     // Visible content layout guide
     public let visibleContentLayoutGuide = UILayoutGuide()
 
+    // If true (default), contentView will be upsized to fill visible space
+    public var contentViewUpsizing = true {
+        didSet { contentViewHeight?.isActive = contentViewUpsizing }
+    }
+
     private var visibleContentLayoutGuideTop: NSLayoutConstraint!
     private var visibleContentLayoutGuideLeft: NSLayoutConstraint!
     private var visibleContentLayoutGuideRight: NSLayoutConstraint!
     private var visibleContentLayoutGuideBottom: NSLayoutConstraint!
+    private var contentViewHeight: NSLayoutConstraint?
 
     private func setupLayout() {
         addLayoutGuide(visibleContentLayoutGuide)
@@ -85,7 +91,8 @@ public class ScrollWrapperView: UIView {
         view.rightAnchor.constraint(equalTo: scrollView.rightAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         view.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-        view.heightAnchor.constraint(greaterThanOrEqualTo: visibleContentLayoutGuide.heightAnchor).isActive = true
+        contentViewHeight = view.heightAnchor.constraint(greaterThanOrEqualTo: visibleContentLayoutGuide.heightAnchor)
+        contentViewHeight?.isActive = contentViewUpsizing
     }
 
 }

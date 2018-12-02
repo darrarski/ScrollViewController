@@ -59,6 +59,72 @@ class ScrollWrapperViewSpec: QuickSpec {
                         expect(sut.visibleContentInsets).to(equal(insets))
                     }
                 }
+
+                context("set content view smaller than wrapper") {
+                    var view: UIView!
+
+                    beforeEach {
+                        sut.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+                        view = UIView(frame: .zero)
+                        view.heightAnchor.constraint(greaterThanOrEqualToConstant: 100).isActive = true
+                        sut.contentView = view
+                    }
+
+                    context("with content view upsizing") {
+                        beforeEach {
+                            sut.contentViewUpsizing = true
+                            sut.layoutIfNeeded()
+                        }
+
+                        it("should content view fill wrapper") {
+                            expect(view.frame) == CGRect(x: 0, y: 0, width: 100, height: 200)
+                        }
+                    }
+
+                    context("without content view upsizing") {
+                        beforeEach {
+                            sut.contentViewUpsizing = false
+                            sut.layoutIfNeeded()
+                        }
+
+                        it("should content view have correct frame") {
+                            expect(view.frame) == CGRect(x: 0, y: 0, width: 100, height: 100)
+                        }
+                    }
+                }
+
+                context("set content view bigger than wrapper") {
+                    var view: UIView!
+
+                    beforeEach {
+                        sut.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+                        view = UIView(frame: .zero)
+                        view.heightAnchor.constraint(greaterThanOrEqualToConstant: 300).isActive = true
+                        sut.contentView = view
+                    }
+
+                    context("with content view upsizing") {
+                        beforeEach {
+                            sut.contentViewUpsizing = true
+                            sut.layoutIfNeeded()
+                        }
+
+                        it("should content view have correct frame") {
+                            expect(view.frame) == CGRect(x: 0, y: 0, width: 100, height: 300)
+                        }
+                    }
+
+                    context("without content view upsizing") {
+                        beforeEach {
+                            sut.contentViewUpsizing = false
+                            sut.layoutIfNeeded()
+                        }
+
+                        it("should content view have correct frame") {
+                            expect(view.frame) == CGRect(x: 0, y: 0, width: 100, height: 300)
+                        }
+                    }
+                }
             }
         }
     }
