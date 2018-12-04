@@ -7,16 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3102D52D1FBD1F79000BAE7A /* KeyboardFrameChangeListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; };
-		3102D52E1FBD1F79000BAE7A /* ScrollViewKeyboardAvoider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; };
-		3102D52F1FBD1F9D000BAE7A /* KeyboardFrameChangeListener.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3102D5301FBD1F9D000BAE7A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E819991FBD1C9500AC267D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3102D5311FBD1F9D000BAE7A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E819981FBD1C9500AC267D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3102D5321FBD1F9D000BAE7A /* ScrollViewKeyboardAvoider.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3199C5251FBD2E9C000666ED /* KeyboardFrameChangeListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; };
-		3199C5261FBD2E9C000666ED /* KeyboardFrameChangeListener.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3199C5271FBD2E9C000666ED /* ScrollViewKeyboardAvoider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; };
-		3199C5281FBD2E9C000666ED /* ScrollViewKeyboardAvoider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		313AA6C721B6A468007B1770 /* KeyboardFrameChangeListener.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		313AA6C821B6A46D007B1770 /* ScrollViewKeyboardAvoider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		313AA6C921B6A47F007B1770 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819981FBD1C9500AC267D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		313AA6CA21B6A481007B1770 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819991FBD1C9500AC267D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31A835201FB2168600F351BE /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A8351E1FB2165600F351BE /* ScrollViewController.swift */; };
 		31A835231FB21A2700F351BE /* KeyboardFrameChangeListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */; };
 		31A835261FB21A4A00F351BE /* ScrollViewKeyboardAvoiderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835241FB21A4700F351BE /* ScrollViewKeyboardAvoiderSpy.swift */; };
@@ -30,14 +24,8 @@
 		31ACE09B1FB14079001C4F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31ACE09A1FB14079001C4F2F /* Assets.xcassets */; };
 		31ACE09E1FB14079001C4F2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31ACE09C1FB14079001C4F2F /* LaunchScreen.storyboard */; };
 		31DFD9C51FB14196005BF855 /* ScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 31DFD9C31FB14196005BF855 /* ScrollViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31DFD9C81FB14196005BF855 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
 		31DFD9C91FB14196005BF855 /* ScrollViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31DFD9D51FB1424F005BF855 /* ScrollViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */; };
-		31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
-		31E8198D1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; };
-		31E8198E1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; };
-		31E8199A1FBD1C9500AC267D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819981FBD1C9500AC267D /* Quick.framework */; };
-		31E8199B1FBD1C9500AC267D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819991FBD1C9500AC267D /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,23 +53,22 @@
 			dstSubfolderSpec = 10;
 			files = (
 				31DFD9C91FB14196005BF855 /* ScrollViewController.framework in Embed Frameworks */,
-				3199C5281FBD2E9C000666ED /* ScrollViewKeyboardAvoider.framework in Embed Frameworks */,
-				3199C5261FBD2E9C000666ED /* KeyboardFrameChangeListener.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31E870851FBD1E8F00BF554E /* CopyFiles */ = {
+		31E870851FBD1E8F00BF554E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3102D52F1FBD1F9D000BAE7A /* KeyboardFrameChangeListener.framework in CopyFiles */,
-				3102D5301FBD1F9D000BAE7A /* Nimble.framework in CopyFiles */,
-				3102D5311FBD1F9D000BAE7A /* Quick.framework in CopyFiles */,
-				3102D5321FBD1F9D000BAE7A /* ScrollViewKeyboardAvoider.framework in CopyFiles */,
+				313AA6C721B6A468007B1770 /* KeyboardFrameChangeListener.framework in Embed Frameworks */,
+				313AA6C821B6A46D007B1770 /* ScrollViewKeyboardAvoider.framework in Embed Frameworks */,
+				313AA6C921B6A47F007B1770 /* Quick.framework in Embed Frameworks */,
+				313AA6CA21B6A481007B1770 /* Nimble.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -107,58 +94,20 @@
 		31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerSpec.swift; sourceTree = "<group>"; };
 		31DFD9D61FB1424F005BF855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31E819891FBD118600AC267D /* KeyboardFrameChangeListener.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeyboardFrameChangeListener.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31E8198A1FBD118600AC267D /* ScrollViewKeyboardAvoider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ScrollViewKeyboardAvoider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScrollViewKeyboardAvoider.framework; path = Carthage/Build/iOS/ScrollViewKeyboardAvoider.framework; sourceTree = "<group>"; };
 		31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeyboardFrameChangeListener.framework; path = Carthage/Build/iOS/KeyboardFrameChangeListener.framework; sourceTree = "<group>"; };
 		31E819981FBD1C9500AC267D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		31E819991FBD1C9500AC267D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		31ACE08D1FB14079001C4F2F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				31DFD9C81FB14196005BF855 /* ScrollViewController.framework in Frameworks */,
-				3199C5271FBD2E9C000666ED /* ScrollViewKeyboardAvoider.framework in Frameworks */,
-				3199C5251FBD2E9C000666ED /* KeyboardFrameChangeListener.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		31DFD9BD1FB14195005BF855 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				31E8198D1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework in Frameworks */,
-				31E8198E1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		31DFD9CF1FB1424F005BF855 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				31DFD9D71FB1424F005BF855 /* ScrollViewController.framework in Frameworks */,
-				3102D52D1FBD1F79000BAE7A /* KeyboardFrameChangeListener.framework in Frameworks */,
-				3102D52E1FBD1F79000BAE7A /* ScrollViewKeyboardAvoider.framework in Frameworks */,
-				31E8199A1FBD1C9500AC267D /* Quick.framework in Frameworks */,
-				31E8199B1FBD1C9500AC267D /* Nimble.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
 		00FA00342123FF7122C9AD1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				31E819891FBD118600AC267D /* KeyboardFrameChangeListener.framework */,
 				31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */,
-				31E819991FBD1C9500AC267D /* Nimble.framework */,
-				31E819981FBD1C9500AC267D /* Quick.framework */,
-				31E8198A1FBD118600AC267D /* ScrollViewKeyboardAvoider.framework */,
 				31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */,
+				31E819981FBD1C9500AC267D /* Quick.framework */,
+				31E819991FBD1C9500AC267D /* Nimble.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,9 +190,9 @@
 			buildConfigurationList = 31ACE0A21FB14079001C4F2F /* Build configuration list for PBXNativeTarget "ScrollViewControllerDemoApp" */;
 			buildPhases = (
 				31ACE08C1FB14079001C4F2F /* Sources */,
-				31ACE08D1FB14079001C4F2F /* Frameworks */,
 				31ACE08E1FB14079001C4F2F /* Resources */,
 				31DFD9CD1FB14196005BF855 /* Embed Frameworks */,
+				313AA6C621B6A2F5007B1770 /* Carthage - Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,11 +209,8 @@
 			buildConfigurationList = 31DFD9CA1FB14196005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewController" */;
 			buildPhases = (
 				31DFD9BC1FB14195005BF855 /* Sources */,
-				31DFD9BD1FB14195005BF855 /* Frameworks */,
 				31DFD9BE1FB14195005BF855 /* Headers */,
 				31DFD9BF1FB14195005BF855 /* Resources */,
-				31E819901FBD126000AC267D /* Carthage - Check Updates */,
-				31E819911FBD126C00AC267D /* Carthage - Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,9 +226,8 @@
 			buildConfigurationList = 31DFD9DA1FB1424F005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewControllerTests" */;
 			buildPhases = (
 				31DFD9CE1FB1424F005BF855 /* Sources */,
-				31DFD9CF1FB1424F005BF855 /* Frameworks */,
 				31DFD9D01FB1424F005BF855 /* Resources */,
-				31E870851FBD1E8F00BF554E /* CopyFiles */,
+				31E870851FBD1E8F00BF554E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,37 +312,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		31E819901FBD126000AC267D /* Carthage - Check Updates */ = {
+		313AA6C621B6A2F5007B1770 /* Carthage - Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "Carthage - Check Updates";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings";
-		};
-		31E819911FBD126C00AC267D /* Carthage - Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/KeyboardFrameChangeListener.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ScrollViewKeyboardAvoider.framework",
 			);
 			name = "Carthage - Copy Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KeyboardFrameChangeListener.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ScrollViewKeyboardAvoider.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "set -e\n\nif ! which carthage > /dev/null; then\n  echo \"error: Carthage not found. Visit https://github.com/Carthage/Carthage to learn more.\"\n  exit 1\nfi\n\ncarthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -492,7 +427,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -552,7 +487,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
