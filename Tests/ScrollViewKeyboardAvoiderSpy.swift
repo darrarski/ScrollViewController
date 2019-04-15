@@ -1,4 +1,4 @@
-import ScrollViewKeyboardAvoider
+import ScrollViewController
 
 class ScrollViewKeyboardAvoiderSpy: ScrollViewKeyboardAvoiding {
 

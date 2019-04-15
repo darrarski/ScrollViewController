@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311063B522652A5800DA6CE2 /* ScrollViewKeyboardAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063B322652A5800DA6CE2 /* ScrollViewKeyboardAvoider.swift */; };
+		311063B622652A5800DA6CE2 /* ScrollViewKeyboardAvoiding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063B422652A5800DA6CE2 /* ScrollViewKeyboardAvoiding.swift */; };
+		311063B822652A7B00DA6CE2 /* ScrollViewKeyboardAvoiderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063B722652A7B00DA6CE2 /* ScrollViewKeyboardAvoiderSpec.swift */; };
+		311063BC22652AEA00DA6CE2 /* KeyboardFrameChangeListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063B922652AEA00DA6CE2 /* KeyboardFrameChangeListener.swift */; };
+		311063BD22652AEA00DA6CE2 /* KeyboardFrameChangeListening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063BA22652AEA00DA6CE2 /* KeyboardFrameChangeListening.swift */; };
+		311063BE22652AEA00DA6CE2 /* KeyboardFrameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063BB22652AEA00DA6CE2 /* KeyboardFrameChange.swift */; };
+		311063C022652B0200DA6CE2 /* KeyboardFrameChangeListenerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063BF22652B0200DA6CE2 /* KeyboardFrameChangeListenerSpec.swift */; };
 		313AA6C721B6A468007B1770 /* KeyboardFrameChangeListener.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198C1FBD11AC00AC267D /* KeyboardFrameChangeListener.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		313AA6C821B6A46D007B1770 /* ScrollViewKeyboardAvoider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E8198B1FBD11AC00AC267D /* ScrollViewKeyboardAvoider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		313AA6C921B6A47F007B1770 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819981FBD1C9500AC267D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -74,6 +81,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		311063B322652A5800DA6CE2 /* ScrollViewKeyboardAvoider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewKeyboardAvoider.swift; sourceTree = "<group>"; };
+		311063B422652A5800DA6CE2 /* ScrollViewKeyboardAvoiding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewKeyboardAvoiding.swift; sourceTree = "<group>"; };
+		311063B722652A7B00DA6CE2 /* ScrollViewKeyboardAvoiderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewKeyboardAvoiderSpec.swift; sourceTree = "<group>"; };
+		311063B922652AEA00DA6CE2 /* KeyboardFrameChangeListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListener.swift; sourceTree = "<group>"; };
+		311063BA22652AEA00DA6CE2 /* KeyboardFrameChangeListening.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListening.swift; sourceTree = "<group>"; };
+		311063BB22652AEA00DA6CE2 /* KeyboardFrameChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChange.swift; sourceTree = "<group>"; };
+		311063BF22652B0200DA6CE2 /* KeyboardFrameChangeListenerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListenerSpec.swift; sourceTree = "<group>"; };
 		31A8351E1FB2165600F351BE /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameChangeListenerMock.swift; sourceTree = "<group>"; };
 		31A835241FB21A4700F351BE /* ScrollViewKeyboardAvoiderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewKeyboardAvoiderSpy.swift; sourceTree = "<group>"; };
@@ -150,8 +164,13 @@
 			isa = PBXGroup;
 			children = (
 				31DFD9C41FB14196005BF855 /* Info.plist */,
+				311063BB22652AEA00DA6CE2 /* KeyboardFrameChange.swift */,
+				311063B922652AEA00DA6CE2 /* KeyboardFrameChangeListener.swift */,
+				311063BA22652AEA00DA6CE2 /* KeyboardFrameChangeListening.swift */,
 				31DFD9C31FB14196005BF855 /* ScrollViewController.h */,
 				31A8351E1FB2165600F351BE /* ScrollViewController.swift */,
+				311063B322652A5800DA6CE2 /* ScrollViewKeyboardAvoider.swift */,
+				311063B422652A5800DA6CE2 /* ScrollViewKeyboardAvoiding.swift */,
 				31A835271FB21D2500F351BE /* ScrollWrapperView.swift */,
 			);
 			path = Sources;
@@ -162,7 +181,9 @@
 			children = (
 				31DFD9D61FB1424F005BF855 /* Info.plist */,
 				31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */,
+				311063BF22652B0200DA6CE2 /* KeyboardFrameChangeListenerSpec.swift */,
 				31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */,
+				311063B722652A7B00DA6CE2 /* ScrollViewKeyboardAvoiderSpec.swift */,
 				31A835241FB21A4700F351BE /* ScrollViewKeyboardAvoiderSpy.swift */,
 				31A8352B1FB21D9200F351BE /* ScrollWrapperViewSpec.swift */,
 				31A8352E1FB21FB300F351BE /* ScrollWrapperViewSpy.swift */,
@@ -352,8 +373,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				311063BE22652AEA00DA6CE2 /* KeyboardFrameChange.swift in Sources */,
+				311063BC22652AEA00DA6CE2 /* KeyboardFrameChangeListener.swift in Sources */,
 				31A835201FB2168600F351BE /* ScrollViewController.swift in Sources */,
 				31A8352A1FB21D4C00F351BE /* ScrollWrapperView.swift in Sources */,
+				311063B622652A5800DA6CE2 /* ScrollViewKeyboardAvoiding.swift in Sources */,
+				311063BD22652AEA00DA6CE2 /* KeyboardFrameChangeListening.swift in Sources */,
+				311063B522652A5800DA6CE2 /* ScrollViewKeyboardAvoider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,9 +390,11 @@
 				31A835301FB21FFA00F351BE /* ScrollWrapperViewSpy.swift in Sources */,
 				31A8352D1FB21DEA00F351BE /* ScrollWrapperViewSpec.swift in Sources */,
 				31A835231FB21A2700F351BE /* KeyboardFrameChangeListenerMock.swift in Sources */,
+				311063C022652B0200DA6CE2 /* KeyboardFrameChangeListenerSpec.swift in Sources */,
 				31A835351FB231B600F351BE /* UIScrollViewMock.swift in Sources */,
 				31A835261FB21A4A00F351BE /* ScrollViewKeyboardAvoiderSpy.swift in Sources */,
 				31DFD9D51FB1424F005BF855 /* ScrollViewControllerSpec.swift in Sources */,
+				311063B822652A7B00DA6CE2 /* ScrollViewKeyboardAvoiderSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
