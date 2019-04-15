@@ -1,10 +1,8 @@
 # ScrollViewController
 
 ![Platform](https://img.shields.io/badge/platform-iOS-333333.svg)
-![Swift v4.2](https://img.shields.io/badge/swift-v4.2-orange.svg)
+![Swift v5.0](https://img.shields.io/badge/swift-v5.0-orange.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/94b1631441baefb33e96/maintainability)](https://codeclimate.com/github/darrarski/ScrollViewController/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/94b1631441baefb33e96/test_coverage)](https://codeclimate.com/github/darrarski/ScrollViewController/test_coverage)
-[![Build Status](https://travis-ci.org/darrarski/ScrollViewController.svg?branch=master)](https://travis-ci.org/darrarski/ScrollViewController)
 [![CocoaPods](https://img.shields.io/cocoapods/v/ScrollViewController.svg)](https://cocoapods.org/pods/ScrollViewController)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
@@ -56,9 +54,9 @@ scrollViewController.contentView = yourContentView
 
 Requirements: 
 
+- [Xcode](https://developer.apple.com/xcode/) 10.2
 - [Carthage](https://github.com/Carthage/Carthage)
-- Ruby with [Bundler](http://bundler.io)
-- Xcode 10
+- [Ruby](https://www.ruby-lang.org/) with [Bundler](https://bundler.io/pl)
 
 To bootstrap the project run:
 
@@ -67,7 +65,7 @@ bundle install
 bundle exec fastlane setup
 ```
 
-Then open `ScrollViewController.xcworkspace` in Xcode.
+Then open `ScrollViewController.xcodeproj` in Xcode.
 
 Use `DemoApp` build scheme for building and runing demo app.
 
@@ -88,4 +86,6 @@ bundle exec fastlane coverage
 
 ## License
 
-MIT License - check out [LICENSE](LICENSE) file.
+Copyright © 2019 Dariusz Rybicki Darrarski
+
+[MIT License](LICENSE)
