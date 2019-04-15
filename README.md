@@ -11,7 +11,7 @@ Wraps your custom view and presents it on the screen in the way it fills visible
 
 ![ScrollViewController Demo App](Misc/ScrollViewController_DemoApp.gif)
 
-Starting from version 1.1.0, ScrollViewController does no longer depends on [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) and [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider) frameworks, which makes it more portable and easier to integrate. That change also makes those frameworks obsolete.
+Starting from version `v1.1.0`, ScrollViewController does no longer depends on [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) and [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider) frameworks, which makes it more portable and easier to integrate. That change also makes those frameworks obsolete.
 
 `KeyboardFrameChangeListener` is used to observe keyboard frame changes and then
 adjust insets using `ScrollViewKeyboardAvoider` so the keyboard does not cover the content. Supports "safe area layout" and makes the content fill visible area.
