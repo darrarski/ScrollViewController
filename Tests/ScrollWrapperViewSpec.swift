@@ -1,6 +1,5 @@
 import Quick
 import Nimble
-
 @testable import ScrollViewController
 
 class ScrollWrapperViewSpec: QuickSpec {

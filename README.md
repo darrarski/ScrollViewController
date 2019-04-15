@@ -2,6 +2,7 @@
 
 ![Platform](https://img.shields.io/badge/platform-iOS-333333.svg)
 ![Swift v5.0](https://img.shields.io/badge/swift-v5.0-orange.svg)
+![test coverage 97%](https://img.shields.io/badge/test_covergage-97%25-success.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/94b1631441baefb33e96/maintainability)](https://codeclimate.com/github/darrarski/ScrollViewController/maintainability)
 [![CocoaPods](https://img.shields.io/cocoapods/v/ScrollViewController.svg)](https://cocoapods.org/pods/ScrollViewController)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -10,21 +11,25 @@ Wraps your custom view and presents it on the screen in the way it fills visible
 
 ![ScrollViewController Demo App](Misc/ScrollViewController_DemoApp.gif)
 
-Uses [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) to observe keyboard frame changes and then
-adjusts insets using [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider) so the keyboard does not cover the content. Supports "safe area layout" and makes the content fill visible area.
+Starting from version `v1.1.0`, ScrollViewController does no longer depends on [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) and [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider) frameworks, which makes it more portable and easier to integrate. That change also makes those frameworks obsolete.
+
+`KeyboardFrameChangeListener` is used to observe keyboard frame changes and then
+adjust insets using `ScrollViewKeyboardAvoider` so the keyboard does not cover the content. Supports "safe area layout" and makes the content fill visible area.
 
 Designed to work on iPhone (including iPhone X) in portrait orientation (should also support other screen orientations as well as iPad screen).
 
 ## Install
 
-Minimum deployment target: **iOS 10.0** (on **iOS >= 11** uses Safe Area Layout for iPhone X compatibility)
+Minimum deployment target: **iOS 10.0** (on **iOS >= 11** uses Safe Area Layout for iPhone X compatibility). 
+
+Last version developed using Swift 4.2 is `v1.0.12`.
 
 ### CocoaPods
 
 You can integrate `ScrollViewController` with your project using [CocoaPods](https://cocoapods.org). Just add this line to your `Podfile`:
 
 ```ruby
-pod 'ScrollViewController', '~> 1.0'
+pod 'ScrollViewController', '~> 1.1'
 ```
 
 ### Carthage
@@ -32,7 +37,7 @@ pod 'ScrollViewController', '~> 1.0'
 You can also use [Carthage](https://github.com/Carthage/Carthage) if you prefer by adding following line to your `Cartfile`:
 
 ```
-github "darrarski/ScrollViewController" ~> 1.0
+github "darrarski/ScrollViewController" ~> 1.1
 ```
 
 `ScrollViewController` depends on [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) and [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider). Dependencies will be automatically resolved by Carthage, but you will have to integrate dependent frameworks with your app as well. For more information refer to [Carthage docs](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).
