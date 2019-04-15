@@ -32,9 +32,9 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "31DFD9D11FB1424F005BF855"
-            BuildableName = "ScrollViewControllerTests.xctest"
-            BlueprintName = "ScrollViewControllerTests"
+            BlueprintIdentifier = "31DFD9C01FB14195005BF855"
+            BuildableName = "ScrollViewController.framework"
+            BlueprintName = "ScrollViewController"
             ReferencedContainer = "container:ScrollViewController.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
