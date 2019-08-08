@@ -1,9 +1,6 @@
 fastlane_version '2.63.0'
 default_platform :ios
 
-XC_PROJECT = 'ScrollViewController.xcodeproj'
-TESTS_SCHEME = 'Tests'
-
 platform :ios do
 
   desc 'Bootstrap project'
@@ -22,8 +19,8 @@ platform :ios do
   desc 'Run unit tests'
   lane :test do
     scan(
-      project: XC_PROJECT,
-      scheme: TESTS_SCHEME,
+      project: 'ScrollViewController.xcodeproj',
+      scheme: 'Tests',
       device: 'iPhone Xs'
     )
   end
@@ -31,11 +28,13 @@ platform :ios do
   desc 'Generate test coverage report in HTML format'
   lane :coverage_html do
     slather(
-      proj: XC_PROJECT,
-      scheme: TESTS_SCHEME,
-      html: true,
-      show: false,
+      proj: 'ScrollViewController.xcodeproj',
+      scheme: 'Tests',
+      binary_basename: 'ScrollViewController',
       output_directory: 'coverage_report',
+      use_bundle_exec: true,
+      teamcity: true,
+      html: true,
       verbose: true
     )
   end
