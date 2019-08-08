@@ -39,8 +39,6 @@ You can also use [Carthage](https://github.com/Carthage/Carthage) if you prefer 
 github "darrarski/ScrollViewController" ~> 1.1
 ```
 
-`ScrollViewController` depends on [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) and [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider). Dependencies will be automatically resolved by Carthage, but you will have to integrate dependent frameworks with your app as well. For more information refer to [Carthage docs](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).
-
 ## Use
 
 Example can be found in [DemoApp](DemoApp).
