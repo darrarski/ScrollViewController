@@ -67,23 +67,23 @@ class ScrollViewControllerSpec: QuickSpec {
                         }
 
                         it("should handle correct frame") {
-                            expect(avoiderSpy.handledKeyboardChanges.first?.0).to(equal(change.frame))
+                            expect(avoiderSpy.handledKeyboardChanges.first?.0) == change.frame
                         }
 
                         it("should handle correct animation duration") {
-                            expect(avoiderSpy.handledKeyboardChanges.first?.1).to(equal(change.animationDuration))
+                            expect(avoiderSpy.handledKeyboardChanges.first?.1) == change.animationDuration
                         }
 
                         it("should handle for correct scroll view") {
-                            expect(avoiderSpy.handledKeyboardChanges.first?.2).to(be(wrapperViewSpy.scrollView))
+                            expect(avoiderSpy.handledKeyboardChanges.first?.2) === wrapperViewSpy.scrollView
                         }
 
                         it("should animate with correct duration") {
-                            expect(didAnimateWithDuration).to(equal(change.animationDuration))
+                            expect(didAnimateWithDuration) == change.animationDuration
                         }
 
                         it("should animate layout") {
-                            expect(wrapperViewSpy.didCallLayoutIfNeeded).to(beTrue())
+                            expect(wrapperViewSpy.didCallLayoutIfNeeded) == true
                         }
                     }
 
@@ -124,12 +124,17 @@ class ScrollViewControllerSpec: QuickSpec {
 
                             beforeEach {
                                 scrollViewMock = UIScrollViewMock()
-                                scrollViewMock.mockedAdjustedContentInset = UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4)
+                                scrollViewMock.mockedAdjustedContentInset = UIEdgeInsets(
+                                    top: 1,
+                                    left: 2,
+                                    bottom: 3,
+                                    right: 4
+                                )
                                 sut.scrollViewDidChangeAdjustedContentInset(scrollViewMock)
                             }
 
                             it("should update visible content insets") {
-                                expect(wrapperViewSpy.visibleContentInsets).to(equal(scrollViewMock.adjustedContentInset))
+                                expect(wrapperViewSpy.visibleContentInsets) == scrollViewMock.adjustedContentInset
                             }
                         }
                     }
@@ -141,7 +146,7 @@ class ScrollViewControllerSpec: QuickSpec {
                         }
 
                         it("should update visible content insets") {
-                            expect(wrapperViewSpy.visibleContentInsets).to(equal(wrapperViewSpy.scrollView.contentInset))
+                            expect(wrapperViewSpy.visibleContentInsets) == wrapperViewSpy.scrollView.contentInset
                         }
                     }
                 }

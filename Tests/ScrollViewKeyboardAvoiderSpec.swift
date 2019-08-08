@@ -64,15 +64,15 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
                         }
 
                         it("should animate with correct duration") {
-                            expect(didAnimateWithDuration).to(equal(animationDuration))
+                            expect(didAnimateWithDuration) == animationDuration
                         }
 
                         it("should set correct bottom content inset") {
-                            expect(scrollView.contentInset.bottom).to(equal(frame.size.height))
+                            expect(scrollView.contentInset.bottom) == frame.size.height
                         }
 
                         it("should set correct bottom indicator inset") {
-                            expect(scrollView.scrollIndicatorInsets.bottom).to(equal(frame.size.height))
+                            expect(scrollView.scrollIndicatorInsets.bottom) == frame.size.height
                         }
                     }
 
@@ -89,15 +89,15 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
                         }
 
                         it("should animate with correct duration") {
-                            expect(didAnimateWithDuration).to(equal(animationDuration))
+                            expect(didAnimateWithDuration) == animationDuration
                         }
 
                         it("should set correct bottom content inset") {
-                            expect(scrollView.contentInset.bottom).to(equal(0))
+                            expect(scrollView.contentInset.bottom) == 0
                         }
 
                         it("should set correct bottom indicator inset") {
-                            expect(scrollView.scrollIndicatorInsets.bottom).to(equal(0))
+                            expect(scrollView.scrollIndicatorInsets.bottom) == 0
                         }
                     }
 
@@ -114,15 +114,15 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
                         }
 
                         it("should animate with correct duration") {
-                            expect(didAnimateWithDuration).to(equal(animationDuration))
+                            expect(didAnimateWithDuration) == animationDuration
                         }
 
                         it("should set correct bottom content inset") {
-                            expect(scrollView.contentInset.bottom).to(equal(frame.size.height / 2))
+                            expect(scrollView.contentInset.bottom) == frame.size.height / 2
                         }
 
                         it("should set correct bottom indicator inset") {
-                            expect(scrollView.scrollIndicatorInsets.bottom).to(equal(frame.size.height / 2))
+                            expect(scrollView.scrollIndicatorInsets.bottom) == frame.size.height / 2
                         }
                     }
                 }
@@ -152,15 +152,15 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
                         }
 
                         it("should animate with correct duration") {
-                            expect(didAnimateWithDuration).to(equal(animationDuration))
+                            expect(didAnimateWithDuration) == animationDuration
                         }
 
                         it("should set correct bottom content inset") {
-                            expect(scrollView.contentInset.bottom).to(equal(frame.size.height - margin))
+                            expect(scrollView.contentInset.bottom) == frame.size.height - margin
                         }
 
                         it("should set correct bottom indicator inset") {
-                            expect(scrollView.scrollIndicatorInsets.bottom).to(equal(frame.size.height - margin))
+                            expect(scrollView.scrollIndicatorInsets.bottom) == frame.size.height - margin
                         }
                     }
 
@@ -177,15 +177,15 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
                         }
 
                         it("should animate with correct duration") {
-                            expect(didAnimateWithDuration).to(equal(animationDuration))
+                            expect(didAnimateWithDuration) == animationDuration
                         }
 
                         it("should set correct bottom content inset") {
-                            expect(scrollView.contentInset.bottom).to(equal(0))
+                            expect(scrollView.contentInset.bottom) == 0
                         }
 
                         it("should set correct bottom indicator inset") {
-                            expect(scrollView.scrollIndicatorInsets.bottom).to(equal(0))
+                            expect(scrollView.scrollIndicatorInsets.bottom) == 0
                         }
                     }
 
@@ -202,15 +202,15 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
                         }
 
                         it("should animate with correct duration") {
-                            expect(didAnimateWithDuration).to(equal(animationDuration))
+                            expect(didAnimateWithDuration) == animationDuration
                         }
 
                         it("should set correct bottom content inset") {
-                            expect(scrollView.contentInset.bottom).to(equal(frame.size.height / 2 - margin))
+                            expect(scrollView.contentInset.bottom) == frame.size.height / 2 - margin
                         }
 
                         it("should set correct bottom indicator inset") {
-                            expect(scrollView.scrollIndicatorInsets.bottom).to(equal(frame.size.height / 2 - margin))
+                            expect(scrollView.scrollIndicatorInsets.bottom) == frame.size.height / 2 - margin
                         }
                     }
                 }

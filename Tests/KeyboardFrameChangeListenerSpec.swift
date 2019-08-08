@@ -50,11 +50,11 @@ class KeyboardFrameChangeListenerSpec: QuickSpec {
                     }
 
                     it("should have correct frame") {
-                        expect(change?.frame).to(equal(frame))
+                        expect(change?.frame) == frame
                     }
 
                     it("should have correct animation duration") {
-                        expect(change?.animationDuration).to(equal(animationDuration))
+                        expect(change?.animationDuration) == animationDuration
                     }
                 }
             }

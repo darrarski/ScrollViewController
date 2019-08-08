@@ -59,7 +59,7 @@ class ScrollWrapperViewSpec: QuickSpec {
                     }
 
                     it("should have correct visible content insets") {
-                        expect(sut.visibleContentInsets).to(equal(insets))
+                        expect(sut.visibleContentInsets) == insets
                     }
                 }
 
@@ -133,4 +133,3 @@ class ScrollWrapperViewSpec: QuickSpec {
     }
 
 }
-
