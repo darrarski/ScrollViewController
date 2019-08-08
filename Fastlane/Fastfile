@@ -3,7 +3,6 @@ default_platform :ios
 
 XC_PROJECT = 'ScrollViewController.xcodeproj'
 TESTS_SCHEME = 'Tests'
-CODECLIMATE_REPORTER_ID = 'ac0047901d9dc04b346416d97e683974fef6932be57d3c01bc72a4f3b076931e'
 
 platform :ios do
 
@@ -20,34 +19,12 @@ platform :ios do
     )
   end
 
-  desc 'Run CodeClimate before-build script'
-  lane :codeclimate_before_build do
-    sh [
-      'cd ..',
-      'curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter',
-      'chmod +x ./cc-test-reporter',
-      './cc-test-reporter before-build'
-    ].join(' && ')
-  end
-
   desc 'Run unit tests'
   lane :test do
     scan(
       project: XC_PROJECT,
       scheme: TESTS_SCHEME,
       device: 'iPhone Xs'
-    )
-  end
-
-  desc 'Generate test coverage report in HTML format and open it'
-  lane :coverage do
-    slather(
-      proj: XC_PROJECT,
-      scheme: TESTS_SCHEME,
-      html: true,
-      show: true,
-      output_directory: 'coverage_report',
-      verbose: true
     )
   end
 
@@ -61,21 +38,6 @@ platform :ios do
       output_directory: 'coverage_report',
       verbose: true
     )
-  end
-
-  desc 'Generate test coverage report in Cobertura XML format'
-  lane :coverage_xml do
-    slather(
-      proj: XC_PROJECT,
-      scheme: TESTS_SCHEME,
-      cobertura_xml: true,
-      verbose: true
-    )
-  end
-
-  desc 'Run CodeClimate after-build script'
-  lane :codeclimate_after_build do
-    sh "cd .. && ./cc-test-reporter after-build -r #{CODECLIMATE_REPORTER_ID}"
   end
 
   desc 'Lint pod'

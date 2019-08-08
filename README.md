@@ -3,7 +3,6 @@
 ![Platform](https://img.shields.io/badge/platform-iOS-333333.svg)
 ![Swift v5.0](https://img.shields.io/badge/swift-v5.0-orange.svg)
 ![test coverage 97%](https://img.shields.io/badge/test_covergage-97%25-success.svg)
-[![Maintainability](https://api.codeclimate.com/v1/badges/94b1631441baefb33e96/maintainability)](https://codeclimate.com/github/darrarski/ScrollViewController/maintainability)
 [![CocoaPods](https://img.shields.io/cocoapods/v/ScrollViewController.svg)](https://cocoapods.org/pods/ScrollViewController)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
@@ -83,11 +82,13 @@ To run tests from command line execute:
 bundle exec fastlane test
 ```
 
-To generate and open test coverage report in HTML format, run:
+To generate test coverage report in HTML format, run:
 
 ```sh
-bundle exec fastlane coverage
+bundle exec fastlane coverage_html
 ```
+
+Report will be saved in `coverage_report` directory.
 
 
 ## License
