@@ -59,7 +59,7 @@ scrollViewController.contentView = yourContentView
 
 Requirements: 
 
-- [Xcode](https://developer.apple.com/xcode/) 10.2
+- [Xcode](https://developer.apple.com/xcode/) 10.3
 - [Carthage](https://github.com/Carthage/Carthage)
 - [Ruby](https://www.ruby-lang.org/) with [Bundler](https://bundler.io/pl)
 
