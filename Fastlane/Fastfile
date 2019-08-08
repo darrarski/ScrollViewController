@@ -80,12 +80,12 @@ platform :ios do
 
   desc 'Lint pod'
   lane :pod_lint do
-    sh 'cd .. && bundle exec pod lib lint'
+    sh 'cd .. && bundle exec pod lib lint --allow-warnings'
   end
 
   desc 'Deploy to CocoaPods'
   lane :pod_deploy do
-    sh 'cd .. && bundle exec pod trunk push'
+    sh 'cd .. && bundle exec pod trunk push --allow-warnings'
   end
 
 end
