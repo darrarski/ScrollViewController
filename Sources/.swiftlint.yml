@@ -6,7 +6,6 @@ opt_in_rules:
   - operator_usage_whitespace
   - number_separator
   - switch_case_on_newline
-  - implicit_return
   - overridden_super_call
   - object_literal
   - nimble_operator
