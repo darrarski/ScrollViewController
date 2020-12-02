@@ -23,6 +23,10 @@ Minimum deployment target: **iOS 10.0** (on **iOS >= 11** uses Safe Area Layout 
 
 Last version developed using Swift 4.2 is `v1.0.12`.
 
+### Swift Package Manager
+
+`ScrollViewController` is compatible with [Swift Package Manager](https://swift.org/package-manager/). You can add it as a dependency to your [Xcode project](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app) or [swift package](https://github.com/apple/swift-package-manager/blob/master/Documentation/Usage.md#defining-dependencies).
+
 ### CocoaPods
 
 You can integrate `ScrollViewController` with your project using [CocoaPods](https://cocoapods.org). Just add this line to your `Podfile`:
