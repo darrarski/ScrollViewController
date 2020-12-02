@@ -15,8 +15,6 @@
 		311063BE22652AEA00DA6CE2 /* KeyboardFrameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063BB22652AEA00DA6CE2 /* KeyboardFrameChange.swift */; };
 		311063C022652B0200DA6CE2 /* KeyboardFrameChangeListenerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063BF22652B0200DA6CE2 /* KeyboardFrameChangeListenerSpec.swift */; };
 		311063C222652CC400DA6CE2 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
-		313AA6C921B6A47F007B1770 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819981FBD1C9500AC267D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		313AA6CA21B6A481007B1770 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819991FBD1C9500AC267D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31A835201FB2168600F351BE /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A8351E1FB2165600F351BE /* ScrollViewController.swift */; };
 		31A835231FB21A2700F351BE /* KeyboardFrameChangeListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */; };
 		31A835261FB21A4A00F351BE /* ScrollViewKeyboardAvoiderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835241FB21A4700F351BE /* ScrollViewKeyboardAvoiderSpy.swift */; };
@@ -63,18 +61,6 @@
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31E870851FBD1E8F00BF554E /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				313AA6C921B6A47F007B1770 /* Quick.framework in Copy Frameworks */,
-				313AA6CA21B6A481007B1770 /* Nimble.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -105,11 +91,16 @@
 		31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerSpec.swift; sourceTree = "<group>"; };
 		31DFD9D61FB1424F005BF855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31E819981FBD1C9500AC267D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		31E819991FBD1C9500AC267D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		310F738525782D800047678C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		311063C122652CAA00DA6CE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,20 +112,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00FA00342123FF7122C9AD1F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				31E819981FBD1C9500AC267D /* Quick.framework */,
-				31E819991FBD1C9500AC267D /* Nimble.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		31ACE0871FB14079001C4F2F = {
 			isa = PBXGroup;
 			children = (
 				31ACE0921FB14079001C4F2F /* DemoApp */,
-				00FA00342123FF7122C9AD1F /* Frameworks */,
 				31ACE0911FB14079001C4F2F /* Products */,
 				31DFD9C21FB14196005BF855 /* Sources */,
 				31DFD9D31FB1424F005BF855 /* Tests */,
@@ -251,8 +232,8 @@
 			buildConfigurationList = 31DFD9DA1FB1424F005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewControllerTests" */;
 			buildPhases = (
 				31DFD9CE1FB1424F005BF855 /* Sources */,
+				310F738525782D800047678C /* Frameworks */,
 				31DFD9D01FB1424F005BF855 /* Resources */,
-				31E870851FBD1E8F00BF554E /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
