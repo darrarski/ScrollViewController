@@ -233,7 +233,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31DFD9CA1FB14196005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewController" */;
 			buildPhases = (
-				31E9287622FCB080006937D3 /* Run SwiftLint */,
 				31DFD9BC1FB14195005BF855 /* Sources */,
 				31DFD9BE1FB14195005BF855 /* Headers */,
 				31DFD9BF1FB14195005BF855 /* Resources */,
@@ -251,7 +250,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31DFD9DA1FB1424F005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewControllerTests" */;
 			buildPhases = (
-				31E9287522FCB04E006937D3 /* Run SwiftLint */,
 				31DFD9CE1FB1424F005BF855 /* Sources */,
 				31DFD9D01FB1424F005BF855 /* Resources */,
 				31E870851FBD1E8F00BF554E /* Copy Frameworks */,
@@ -338,45 +336,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		31E9287522FCB04E006937D3 /* Run SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run SwiftLint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nif [ \"$CI\" = \"true\" ]; then\n  echo \"warning: Skipping SwiftLint on CI\"\n  exit 0\nfi\n\nif ! which swiftlint > /dev/null; then\n  echo \"error: SwiftLint is not installed. Visit http://github.com/realm/SwiftLint to learn more.\"\n  exit 1\nfi\n\ncd Tests\nswiftlint\n";
-		};
-		31E9287622FCB080006937D3 /* Run SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run SwiftLint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nif [ \"$CI\" = \"true\" ]; then\n  echo \"warning: Skipping SwiftLint on CI\"\n  exit 0\nfi\n\nif ! which swiftlint > /dev/null; then\n  echo \"error: SwiftLint is not installed. Visit http://github.com/realm/SwiftLint to learn more.\"\n  exit 1\nfi\n\ncd Sources\nswiftlint\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31ACE08C1FB14079001C4F2F /* Sources */ = {

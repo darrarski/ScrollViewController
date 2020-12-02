@@ -58,7 +58,6 @@ Requirements:
 
 - [Xcode](https://developer.apple.com/xcode/) v10.3
 - [Carthage](https://github.com/Carthage/Carthage) v0.33.0
-- [SwiftLint](http://github.com/realm/SwiftLint) v0.34.0
 - [Ruby](https://www.ruby-lang.org/) with [Bundler](https://bundler.io/pl)
 
 To bootstrap the project run:
