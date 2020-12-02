@@ -55,3 +55,4 @@ cobertura.xml
 
 ## CodeClimate
 cc-test-reporter
+.build
