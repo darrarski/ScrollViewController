@@ -63,7 +63,6 @@ To bootstrap the project run:
 
 ```sh
 bundle install
-bundle exec fastlane setup
 ```
 
 Then open `ScrollViewController.xcodeproj` in Xcode.
@@ -71,21 +70,6 @@ Then open `ScrollViewController.xcodeproj` in Xcode.
 Use `DemoApp` build scheme for building and runing demo app.
 
 Use `Tests` build scheme for runing tests.
-
-To run tests from command line execute:
-
-```sh
-bundle exec fastlane test
-```
-
-To generate test coverage report in HTML format, run:
-
-```sh
-bundle exec fastlane coverage_html
-```
-
-Report will be saved in `coverage_report` directory.
-
 
 ## License
 
