@@ -23,6 +23,10 @@ Minimum deployment target: **iOS 10.0** (on **iOS >= 11** uses Safe Area Layout 
 
 Last version developed using Swift 4.2 is `v1.0.12`.
 
+### Swift Package Manager
+
+`ScrollViewController` is compatible with [Swift Package Manager](https://swift.org/package-manager/). You can add it as a dependency to your [Xcode project](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app) or [swift package](https://github.com/apple/swift-package-manager/blob/master/Documentation/Usage.md#defining-dependencies).
+
 ### CocoaPods
 
 You can integrate `ScrollViewController` with your project using [CocoaPods](https://cocoapods.org). Just add this line to your `Podfile`:
@@ -54,18 +58,15 @@ scrollViewController.contentView = yourContentView
 
 ## Develop
 
-Requirements: 
+Requirements:
 
-- [Xcode](https://developer.apple.com/xcode/) v10.3
-- [Carthage](https://github.com/Carthage/Carthage) v0.33.0
-- [SwiftLint](http://github.com/realm/SwiftLint) v0.34.0
+- [Xcode](https://developer.apple.com/xcode/) v12.2
 - [Ruby](https://www.ruby-lang.org/) with [Bundler](https://bundler.io/pl)
 
 To bootstrap the project run:
 
 ```sh
 bundle install
-bundle exec fastlane setup
 ```
 
 Then open `ScrollViewController.xcodeproj` in Xcode.
@@ -74,23 +75,20 @@ Use `DemoApp` build scheme for building and runing demo app.
 
 Use `Tests` build scheme for runing tests.
 
-To run tests from command line execute:
+To lint the pod run:
 
 ```sh
-bundle exec fastlane test
+bundle exec pod lib lint --allow-warnings
 ```
 
-To generate test coverage report in HTML format, run:
+To deploy the pod run:
 
 ```sh
-bundle exec fastlane coverage_html
+bundle exec pod trunk push --allow-warnings
 ```
-
-Report will be saved in `coverage_report` directory.
-
 
 ## License
 
-Copyright © 2019 Dariusz Rybicki Darrarski
+Copyright © 2020 Dariusz Rybicki Darrarski
 
 [MIT License](LICENSE)

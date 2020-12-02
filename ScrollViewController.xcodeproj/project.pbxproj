@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310F739625782E200047678C /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 310F739525782E200047678C /* Quick */; };
+		310F739B25782E3A0047678C /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 310F739A25782E3A0047678C /* Nimble */; };
 		311063B522652A5800DA6CE2 /* ScrollViewKeyboardAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063B322652A5800DA6CE2 /* ScrollViewKeyboardAvoider.swift */; };
 		311063B622652A5800DA6CE2 /* ScrollViewKeyboardAvoiding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063B422652A5800DA6CE2 /* ScrollViewKeyboardAvoiding.swift */; };
 		311063B822652A7B00DA6CE2 /* ScrollViewKeyboardAvoiderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063B722652A7B00DA6CE2 /* ScrollViewKeyboardAvoiderSpec.swift */; };
@@ -15,8 +17,6 @@
 		311063BE22652AEA00DA6CE2 /* KeyboardFrameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063BB22652AEA00DA6CE2 /* KeyboardFrameChange.swift */; };
 		311063C022652B0200DA6CE2 /* KeyboardFrameChangeListenerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311063BF22652B0200DA6CE2 /* KeyboardFrameChangeListenerSpec.swift */; };
 		311063C222652CC400DA6CE2 /* ScrollViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DFD9C11FB14195005BF855 /* ScrollViewController.framework */; };
-		313AA6C921B6A47F007B1770 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819981FBD1C9500AC267D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		313AA6CA21B6A481007B1770 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 31E819991FBD1C9500AC267D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31A835201FB2168600F351BE /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A8351E1FB2165600F351BE /* ScrollViewController.swift */; };
 		31A835231FB21A2700F351BE /* KeyboardFrameChangeListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835211FB21A2500F351BE /* KeyboardFrameChangeListenerMock.swift */; };
 		31A835261FB21A4A00F351BE /* ScrollViewKeyboardAvoiderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A835241FB21A4700F351BE /* ScrollViewKeyboardAvoiderSpy.swift */; };
@@ -63,18 +63,6 @@
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31E870851FBD1E8F00BF554E /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				313AA6C921B6A47F007B1770 /* Quick.framework in Copy Frameworks */,
-				313AA6CA21B6A481007B1770 /* Nimble.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -105,11 +93,18 @@
 		31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DFD9D41FB1424F005BF855 /* ScrollViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerSpec.swift; sourceTree = "<group>"; };
 		31DFD9D61FB1424F005BF855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31E819981FBD1C9500AC267D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		31E819991FBD1C9500AC267D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		310F738525782D800047678C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				310F739625782E200047678C /* Quick in Frameworks */,
+				310F739B25782E3A0047678C /* Nimble in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		311063C122652CAA00DA6CE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,20 +116,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00FA00342123FF7122C9AD1F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				31E819981FBD1C9500AC267D /* Quick.framework */,
-				31E819991FBD1C9500AC267D /* Nimble.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		31ACE0871FB14079001C4F2F = {
 			isa = PBXGroup;
 			children = (
 				31ACE0921FB14079001C4F2F /* DemoApp */,
-				00FA00342123FF7122C9AD1F /* Frameworks */,
 				31ACE0911FB14079001C4F2F /* Products */,
 				31DFD9C21FB14196005BF855 /* Sources */,
 				31DFD9D31FB1424F005BF855 /* Tests */,
@@ -233,7 +218,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31DFD9CA1FB14196005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewController" */;
 			buildPhases = (
-				31E9287622FCB080006937D3 /* Run SwiftLint */,
 				31DFD9BC1FB14195005BF855 /* Sources */,
 				31DFD9BE1FB14195005BF855 /* Headers */,
 				31DFD9BF1FB14195005BF855 /* Resources */,
@@ -251,10 +235,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31DFD9DA1FB1424F005BF855 /* Build configuration list for PBXNativeTarget "ScrollViewControllerTests" */;
 			buildPhases = (
-				31E9287522FCB04E006937D3 /* Run SwiftLint */,
 				31DFD9CE1FB1424F005BF855 /* Sources */,
+				310F738525782D800047678C /* Frameworks */,
 				31DFD9D01FB1424F005BF855 /* Resources */,
-				31E870851FBD1E8F00BF554E /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +245,10 @@
 				31DFD9D91FB1424F005BF855 /* PBXTargetDependency */,
 			);
 			name = ScrollViewControllerTests;
+			packageProductDependencies = (
+				310F739525782E200047678C /* Quick */,
+				310F739A25782E3A0047678C /* Nimble */,
+			);
 			productName = ScrollViewControllerTests;
 			productReference = 31DFD9D21FB1424F005BF855 /* ScrollViewControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -302,6 +289,10 @@
 				Base,
 			);
 			mainGroup = 31ACE0871FB14079001C4F2F;
+			packageReferences = (
+				310F739425782E200047678C /* XCRemoteSwiftPackageReference "Quick" */,
+				310F739925782E3A0047678C /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = 31ACE0911FB14079001C4F2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -338,45 +329,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		31E9287522FCB04E006937D3 /* Run SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run SwiftLint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nif [ \"$CI\" = \"true\" ]; then\n  echo \"warning: Skipping SwiftLint on CI\"\n  exit 0\nfi\n\nif ! which swiftlint > /dev/null; then\n  echo \"error: SwiftLint is not installed. Visit http://github.com/realm/SwiftLint to learn more.\"\n  exit 1\nfi\n\ncd Tests\nswiftlint\n";
-		};
-		31E9287622FCB080006937D3 /* Run SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run SwiftLint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nif [ \"$CI\" = \"true\" ]; then\n  echo \"warning: Skipping SwiftLint on CI\"\n  exit 0\nfi\n\nif ! which swiftlint > /dev/null; then\n  echo \"error: SwiftLint is not installed. Visit http://github.com/realm/SwiftLint to learn more.\"\n  exit 1\nfi\n\ncd Sources\nswiftlint\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31ACE08C1FB14079001C4F2F /* Sources */ = {
@@ -553,7 +505,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -568,7 +521,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = DemoApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewControllerDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -586,7 +542,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = DemoApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewControllerDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -609,7 +568,11 @@
 				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -634,7 +597,11 @@
 				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -653,7 +620,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -670,7 +641,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.ScrollViewControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -718,6 +693,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		310F739425782E200047678C /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		310F739925782E3A0047678C /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		310F739525782E200047678C /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 310F739425782E200047678C /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		310F739A25782E3A0047678C /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 310F739925782E3A0047678C /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 31ACE0881FB14079001C4F2F /* Project object */;
 }
