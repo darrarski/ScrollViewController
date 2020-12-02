@@ -75,8 +75,20 @@ Use `DemoApp` build scheme for building and runing demo app.
 
 Use `Tests` build scheme for runing tests.
 
+To lint the pod run:
+
+```sh
+bundle exec pod lib lint --allow-warnings
+```
+
+To deploy the pod run:
+
+```sh
+bundle exec pod trunk push --allow-warnings
+```
+
 ## License
 
-Copyright © 2019 Dariusz Rybicki Darrarski
+Copyright © 2020 Dariusz Rybicki Darrarski
 
 [MIT License](LICENSE)
