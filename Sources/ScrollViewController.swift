@@ -1,7 +1,7 @@
 import UIKit
 
 /// Scroll View Controller
-public class ScrollViewController: UIViewController, UIScrollViewDelegate {
+open class ScrollViewController: UIViewController, UIScrollViewDelegate {
 
     /// Animates using provided duration and closure
     public typealias Animator = (TimeInterval, @escaping () -> Void) -> Void
@@ -36,12 +36,12 @@ public class ScrollViewController: UIViewController, UIScrollViewDelegate {
     // MARK: View
 
     /// Loads view
-    override public func loadView() {
+    open override func loadView() {
         view = createWrapperView()
     }
 
     /// Called when view is loaded
-    override public func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         wrapperView.scrollView.delegate = self
         keyboardFrameChangeListener.keyboardFrameWillChange = { [unowned self] change in

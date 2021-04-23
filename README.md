@@ -3,14 +3,11 @@
 ![Platform](https://img.shields.io/badge/platform-iOS-333333.svg)
 ![Swift v5.0](https://img.shields.io/badge/swift-v5.0-orange.svg)
 ![test coverage 97%](https://img.shields.io/badge/test_covergage-97%25-success.svg)
-[![CocoaPods](https://img.shields.io/cocoapods/v/ScrollViewController.svg)](https://cocoapods.org/pods/ScrollViewController)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Wraps your custom view and presents it on the screen in the way it fills visible area (not covered by navigation bar, keyboard etc.). If your custom view is too big, you will be able to scroll the content thanks to embedded `UIScrollView`.
 
 ![ScrollViewController Demo App](Misc/ScrollViewController_DemoApp.gif)
-
-Starting from version `v1.1.0`, ScrollViewController does no longer depends on [KeyboardFrameChangeListener](https://github.com/darrarski/KeyboardFrameChangeListener) and [ScrollViewKeyboardAvoider](https://github.com/darrarski/ScrollViewKeyboardAvoider) frameworks, which makes it more portable and easier to integrate. That change also makes those frameworks obsolete.
 
 `KeyboardFrameChangeListener` is used to observe keyboard frame changes and then
 adjust insets using `ScrollViewKeyboardAvoider` so the keyboard does not cover the content. Supports "safe area layout" and makes the content fill visible area.
@@ -27,13 +24,6 @@ Last version developed using Swift 4.2 is `v1.0.12`.
 
 `ScrollViewController` is compatible with [Swift Package Manager](https://swift.org/package-manager/). You can add it as a dependency to your [Xcode project](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app) or [swift package](https://github.com/apple/swift-package-manager/blob/master/Documentation/Usage.md#defining-dependencies).
 
-### CocoaPods
-
-You can integrate `ScrollViewController` with your project using [CocoaPods](https://cocoapods.org). Just add this line to your `Podfile`:
-
-```ruby
-pod 'ScrollViewController', '~> 1.1'
-```
 
 ### Carthage
 
