@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "ScrollViewController",
     platforms: [
-        .iOS("10.0")
+        .iOS(.v10)
     ],
     products: [
         .library(
