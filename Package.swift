@@ -15,7 +15,8 @@ let package = Package(
     targets: [
         .target(
             name: "ScrollViewController",
-            path: "Sources"
+            path: "Sources",
+            exclude: ["Info.plist"]
         ),
     ]
 )
