@@ -58,6 +58,11 @@ public class ScrollWrapperView: UIView {
         didSet { contentViewHeight?.isActive = contentViewStretching }
     }
 
+    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        guard let contentView = contentView, contentView.frame.contains(point) else { return nil }
+        return super.hitTest(point, with: event)
+    }
+
     private var visibleContentLayoutGuideTop: NSLayoutConstraint!
     private var visibleContentLayoutGuideLeft: NSLayoutConstraint!
     private var visibleContentLayoutGuideRight: NSLayoutConstraint!
