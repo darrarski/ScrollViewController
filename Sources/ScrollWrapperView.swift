@@ -58,9 +58,17 @@ public class ScrollWrapperView: UIView {
         didSet { contentViewHeight?.isActive = contentViewStretching }
     }
 
+    // If true (default) touches outside the content view will be handled and allow scrolling
+    public var handlesTouchesOutsideContent = true
+
     public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        guard let contentView = contentView, contentView.frame.contains(point) else { return nil }
-        return super.hitTest(point, with: event)
+        if handlesTouchesOutsideContent {
+            return super.hitTest(point, with: event)
+        }
+        if let contentView = contentView, contentView.frame.contains(convert(point, to: contentView)) {
+            return super.hitTest(point, with: event)
+        }
+        return nil
     }
 
     private var visibleContentLayoutGuideTop: NSLayoutConstraint!
