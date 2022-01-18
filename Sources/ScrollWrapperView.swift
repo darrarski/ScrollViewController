@@ -7,6 +7,7 @@ public class ScrollWrapperView: UIView {
     public init() {
         super.init(frame: .zero)
         addSubview(scrollView)
+        scrollView.addSubview(contentWrapperView)
         setupLayout()
     }
 
@@ -24,11 +25,15 @@ public class ScrollWrapperView: UIView {
     public var contentView: UIView? {
         didSet {
             oldValue?.removeFromSuperview()
+            contentViewTopEqualSuper = nil
+            contentViewTopGreaterThanSuper = nil
             guard let newValue = contentView else { return }
-            scrollView.addSubview(newValue)
+            contentWrapperView.addSubview(newValue)
             setupLayout(contentView: newValue)
         }
     }
+
+    let contentWrapperView = UIView()
 
     // MARK: Layout
 
@@ -55,7 +60,15 @@ public class ScrollWrapperView: UIView {
 
     // If true (default), contentView will be stretched to fill visible space
     public var contentViewStretching = true {
-        didSet { contentViewHeight?.isActive = contentViewStretching }
+        didSet { contentWrapperHeight.isActive = contentViewStretching }
+    }
+
+    // If true (defualt is false) the content view will be aligned to the bottom of scrollable area
+    public var alignContentToBottom = false {
+        didSet {
+            contentViewTopGreaterThanSuper?.isActive = alignContentToBottom == true
+            contentViewTopEqualSuper?.isActive = alignContentToBottom == false
+        }
     }
 
     // If true (default) touches outside the content view will be handled and allow scrolling
@@ -65,7 +78,7 @@ public class ScrollWrapperView: UIView {
         if handlesTouchesOutsideContent {
             return super.hitTest(point, with: event)
         }
-        if let contentView = contentView, contentView.frame.contains(convert(point, to: contentView)) {
+        if let contentView = contentView, contentView.bounds.contains(convert(point, to: contentView)) {
             return super.hitTest(point, with: event)
         }
         return nil
@@ -75,7 +88,9 @@ public class ScrollWrapperView: UIView {
     private var visibleContentLayoutGuideLeft: NSLayoutConstraint!
     private var visibleContentLayoutGuideRight: NSLayoutConstraint!
     private var visibleContentLayoutGuideBottom: NSLayoutConstraint!
-    private var contentViewHeight: NSLayoutConstraint?
+    private var contentWrapperHeight: NSLayoutConstraint!
+    private var contentViewTopEqualSuper: NSLayoutConstraint?
+    private var contentViewTopGreaterThanSuper: NSLayoutConstraint?
 
     private func setupLayout() {
         addLayoutGuide(visibleContentLayoutGuide)
@@ -95,17 +110,32 @@ public class ScrollWrapperView: UIView {
         scrollView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+
+        contentWrapperView.translatesAutoresizingMaskIntoConstraints = false
+        contentWrapperView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        contentWrapperView.leftAnchor.constraint(equalTo: scrollView.leftAnchor).isActive = true
+        contentWrapperView.rightAnchor.constraint(equalTo: scrollView.rightAnchor).isActive = true
+        contentWrapperView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+        contentWrapperView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+
+        contentWrapperHeight = contentWrapperView.heightAnchor.constraint(
+            greaterThanOrEqualTo: visibleContentLayoutGuide.heightAnchor
+        )
+        contentWrapperHeight.isActive = contentViewStretching
     }
 
     private func setupLayout(contentView view: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
-        view.leftAnchor.constraint(equalTo: scrollView.leftAnchor).isActive = true
-        view.rightAnchor.constraint(equalTo: scrollView.rightAnchor).isActive = true
-        view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-        view.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-        contentViewHeight = view.heightAnchor.constraint(greaterThanOrEqualTo: visibleContentLayoutGuide.heightAnchor)
-        contentViewHeight?.isActive = contentViewStretching
+
+        contentViewTopEqualSuper = view.topAnchor.constraint(equalTo: contentWrapperView.topAnchor)
+        contentViewTopEqualSuper?.isActive = alignContentToBottom == false
+
+        contentViewTopGreaterThanSuper = view.topAnchor.constraint(greaterThanOrEqualTo: contentWrapperView.topAnchor)
+        contentViewTopGreaterThanSuper?.isActive = alignContentToBottom == true
+
+        view.leftAnchor.constraint(equalTo: contentWrapperView.leftAnchor).isActive = true
+        view.rightAnchor.constraint(equalTo: contentWrapperView.rightAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: contentWrapperView.bottomAnchor).isActive = true
     }
 
 }
