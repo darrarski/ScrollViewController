@@ -59,6 +59,19 @@ public class ScrollWrapperView: UIView {
         }
     }
 
+    /// Scrollable content insets.
+    ///
+    /// Default is `.zero` which means no insets.
+    public var contentInsets: UIEdgeInsets = .zero {
+        didSet {
+            contentViewTopEqualSuper?.constant = contentInsets.top
+            contentViewTopGreaterThanSuper?.constant = contentInsets.top
+            contentViewLeft?.constant = contentInsets.left
+            contentViewRight?.constant = -contentInsets.right
+            contentViewBottom?.constant = -contentInsets.bottom
+        }
+    }
+
     // MARK: - Touch handling configuration
 
     /// If `true` touches outside the `contentView` will be handled and allow scrolling.
@@ -156,18 +169,23 @@ public class ScrollWrapperView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
 
         contentViewTopEqualSuper = view.topAnchor.constraint(equalTo: contentWrapperView.topAnchor)
+        contentViewTopEqualSuper?.constant = contentInsets.top
         contentViewTopEqualSuper?.isActive = alignContentToBottom == false
 
         contentViewTopGreaterThanSuper = view.topAnchor.constraint(greaterThanOrEqualTo: contentWrapperView.topAnchor)
+        contentViewTopGreaterThanSuper?.constant = contentInsets.top
         contentViewTopGreaterThanSuper?.isActive = alignContentToBottom == true
 
         contentViewLeft = view.leftAnchor.constraint(equalTo: contentWrapperView.leftAnchor)
+        contentViewLeft?.constant = contentInsets.left
         contentViewLeft?.isActive = true
 
         contentViewRight = view.rightAnchor.constraint(equalTo: contentWrapperView.rightAnchor)
+        contentViewRight?.constant = -contentInsets.right
         contentViewRight?.isActive = true
 
         contentViewBottom = view.bottomAnchor.constraint(equalTo: contentWrapperView.bottomAnchor)
+        contentViewBottom?.constant = -contentInsets.bottom
         contentViewBottom?.isActive = true
     }
 }
