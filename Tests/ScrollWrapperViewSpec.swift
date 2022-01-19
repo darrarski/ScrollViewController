@@ -36,7 +36,7 @@ class ScrollWrapperViewSpec: QuickSpec {
                     }
 
                     it("should add content view to scroll view") {
-                        expect(view.superview).to(be(sut.scrollView))
+                        expect(view.superview?.superview).to(be(sut.scrollView))
                     }
 
                     context("set content view to nil") {
