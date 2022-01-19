@@ -1,8 +1,8 @@
 # ScrollViewController
 
 ![Platform](https://img.shields.io/badge/platform-iOS-333333.svg)
-![Swift v5.0](https://img.shields.io/badge/swift-v5.0-orange.svg)
-![test coverage 97%](https://img.shields.io/badge/test_covergage-97%25-success.svg)
+![Swift v5.5](https://img.shields.io/badge/swift-v5.5-orange.svg)
+![test coverage 89%](https://img.shields.io/badge/test_covergage-89%25-success.svg)
 [![CocoaPods](https://img.shields.io/cocoapods/v/ScrollViewController.svg)](https://cocoapods.org/pods/ScrollViewController)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
@@ -32,7 +32,7 @@ Last version developed using Swift 4.2 is `v1.0.12`.
 You can integrate `ScrollViewController` with your project using [CocoaPods](https://cocoapods.org). Just add this line to your `Podfile`:
 
 ```ruby
-pod 'ScrollViewController', '~> 1.1'
+pod 'ScrollViewController', '~> 1.3'
 ```
 
 ### Carthage
@@ -40,7 +40,7 @@ pod 'ScrollViewController', '~> 1.1'
 You can also use [Carthage](https://github.com/Carthage/Carthage) if you prefer by adding following line to your `Cartfile`:
 
 ```
-github "darrarski/ScrollViewController" ~> 1.1
+github "darrarski/ScrollViewController" ~> 1.3
 ```
 
 ## Use
@@ -60,7 +60,7 @@ scrollViewController.contentView = yourContentView
 
 Requirements:
 
-- [Xcode](https://developer.apple.com/xcode/) v12.2
+- [Xcode](https://developer.apple.com/xcode/) v13.1
 - [Ruby](https://www.ruby-lang.org/) with [Bundler](https://bundler.io/pl)
 
 To bootstrap the project run:
@@ -93,6 +93,6 @@ bundle exec pod trunk push --allow-warnings
 
 ## License
 
-Copyright © 2020 Dariusz Rybicki Darrarski
+Copyright © 2022 Dariusz Rybicki Darrarski
 
 [MIT License](LICENSE)
