@@ -684,7 +684,7 @@
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				minimumVersion = 4.0.0;
 			};
 		};
 		310F739925782E3A0047678C /* XCRemoteSwiftPackageReference "Nimble" */ = {
@@ -692,7 +692,7 @@
 			repositoryURL = "https://github.com/Quick/Nimble.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
+				minimumVersion = 9.2.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
