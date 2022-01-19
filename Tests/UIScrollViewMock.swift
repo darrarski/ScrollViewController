@@ -1,13 +1,9 @@
 import UIKit
 
-class UIScrollViewMock: UIScrollView {
-
+final class UIScrollViewMock: UIScrollView {
     var mockedAdjustedContentInset = UIEdgeInsets.zero
 
-    // MARK: UIScrollView
+    // MARK: - UIScrollView
 
-    override var adjustedContentInset: UIEdgeInsets {
-        return mockedAdjustedContentInset
-    }
-
+    override var adjustedContentInset: UIEdgeInsets { mockedAdjustedContentInset }
 }

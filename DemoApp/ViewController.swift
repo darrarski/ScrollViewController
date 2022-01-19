@@ -1,19 +1,16 @@
 import UIKit
 import ScrollViewController
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         navigationItem.prompt = "ScrollViewController"
         navigationItem.title = "Demo"
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        return nil
-    }
+    required init?(coder aDecoder: NSCoder) { nil }
 
-    // MARK: View
+    // MARK: - View
 
     override func loadView() {
         view = UIView(frame: .zero)
@@ -27,7 +24,7 @@ class ViewController: UIViewController {
         scrollViewController.contentView = View()
     }
 
-    // MARK: Private
+    // MARK: - Internals
 
     private let scrollViewController = ScrollViewController()
 
@@ -41,5 +38,4 @@ class ViewController: UIViewController {
         viewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         viewController.didMove(toParent: self)
     }
-
 }

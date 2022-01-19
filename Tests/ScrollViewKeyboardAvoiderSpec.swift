@@ -2,8 +2,7 @@ import Quick
 import Nimble
 @testable import ScrollViewController
 
-class ScrollViewKeyboardAvoiderSpec: QuickSpec {
-
+final class ScrollViewKeyboardAvoiderSpec: QuickSpec {
     override func spec() {
         describe("ScrollViewKeyboardAvoider") {
             var sut: ScrollViewKeyboardAvoider!
@@ -257,5 +256,4 @@ class ScrollViewKeyboardAvoiderSpec: QuickSpec {
             return frame
         }
     }
-
 }

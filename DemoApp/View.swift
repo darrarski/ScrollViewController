@@ -1,7 +1,6 @@
 import UIKit
 
-class View: UIView {
-
+final class View: UIView {
     init() {
         super.init(frame: .zero)
         addSubviews()
@@ -9,11 +8,9 @@ class View: UIView {
         setupLayout()
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        return nil
-    }
+    required init?(coder aDecoder: NSCoder) { nil }
 
-    // MARK: Subviews
+    // MARK: - Subviews
 
     let textView = UITextView(frame: .zero)
 
@@ -33,7 +30,7 @@ class View: UIView {
         """
     }
 
-    // MARK: Layout
+    // MARK: - Layout
 
     private func setupLayout() {
         textView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,5 +39,4 @@ class View: UIView {
         textView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
         textView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16).isActive = true
     }
-
 }

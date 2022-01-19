@@ -2,8 +2,7 @@ import Quick
 import Nimble
 @testable import ScrollViewController
 
-class KeyboardFrameChangeListenerSpec: QuickSpec {
-
+final class KeyboardFrameChangeListenerSpec: QuickSpec {
     override func spec() {
         describe("KeyboardFrameChangeListener") {
             var sut: KeyboardFrameChangeListener!
@@ -74,5 +73,4 @@ class KeyboardFrameChangeListenerSpec: QuickSpec {
             }
         }
     }
-
 }

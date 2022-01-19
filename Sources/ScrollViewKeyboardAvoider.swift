@@ -1,8 +1,7 @@
 import UIKit
 
-/// ScrollViewKeyboardAvoiding implementation
-public class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
-
+/// `ScrollViewKeyboardAvoiding` implementation.
+public final class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
     /// Animates using provided duration and closure
     public typealias Animator = (TimeInterval, @escaping () -> Void) -> Void
 
@@ -13,17 +12,13 @@ public class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
         self.animate = animator
     }
 
-    // MARK: ScrollViewKeyboardAvoiding
+    // MARK: - ScrollViewKeyboardAvoiding
 
-    /// Handle keyboard frame change
-    ///
-    /// - Parameters:
-    ///   - frame: new keyboard frame
-    ///   - animationDuration: frame change animation duration
-    ///   - scrollView: target UIScrollView
-    public func handleKeyboardFrameChange(_ frame: CGRect,
-                                          animationDuration: TimeInterval,
-                                          for scrollView: UIScrollView) {
+    public func handleKeyboardFrameChange(
+        _ frame: CGRect,
+        animationDuration: TimeInterval,
+        for scrollView: UIScrollView
+    ) {
         guard let superview = scrollView.superview else { return }
         let keyboardFrame = superview.convert(frame, from: nil)
         var insets = scrollView.contentInset
@@ -41,8 +36,7 @@ public class ScrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding {
         }
     }
 
-    // MARK: Private
+    // MARK: - Internals
 
     private let animate: Animator
-
 }

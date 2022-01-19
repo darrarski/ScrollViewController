@@ -1,22 +1,20 @@
 import UIKit
 
-/// KeyboardFrameChangeListining implementation
-public class KeyboardFrameChangeListener: KeyboardFrameChangeListening {
-
-    /// Create new listener
+/// `KeyboardFrameChangeListining` implementation.
+public final class KeyboardFrameChangeListener: KeyboardFrameChangeListening {
+    /// Create new listener.
     ///
-    /// - Parameter notificationCenter: source of keyboard frame change notifications
+    /// - Parameter notificationCenter: Source of keyboard frame change notifications.
     public init(notificationCenter: NotificationCenter) {
         self.notificationCenter = notificationCenter
         observe()
     }
 
-    // MARK: KeyboardFrameChangeListening
+    // MARK: - KeyboardFrameChangeListening
 
-    /// Called when keyboard frame is about to change
     public var keyboardFrameWillChange: ((KeyboardFrameChange) -> Void)?
 
-    // MARK: Private
+    // MARK: - Internals
 
     private let notificationCenter: NotificationCenter
     private var token: NSObjectProtocol?
@@ -36,11 +34,9 @@ public class KeyboardFrameChangeListener: KeyboardFrameChangeListening {
         let change = KeyboardFrameChange(frame: endFrame, animationDuration: animationDuration)
         keyboardFrameWillChange?(change)
     }
-
 }
 
 private extension Notification {
-
     var keyboardFrameEnd: CGRect? {
         return userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
     }
@@ -48,5 +44,4 @@ private extension Notification {
     var keyboardAnimationDuration: Double? {
         return userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
     }
-
 }

@@ -1,46 +1,86 @@
 import UIKit
 
-/// UIScrollView wrapper
+/// `UIScrollView` wrapper that allows configuring how the scrollable content is laid out.
 public class ScrollWrapperView: UIView {
-
-    /// Create wrapper
+    /// Create `UIScrollView` wrapper view.
     public init() {
+        scrollView = UIScrollView(frame: .zero)
         super.init(frame: .zero)
+        scrollView.keyboardDismissMode = .interactive
         addSubview(scrollView)
         scrollView.addSubview(contentWrapperView)
         setupLayout()
     }
 
-    /// Does nothing, class is designed to be used programatically
-    required public init?(coder aDecoder: NSCoder) {
-        return nil
-    }
+    /// Does nothing, this class is designed to be used programmatically.
+    required public init?(coder aDecoder: NSCoder) { nil }
 
-    // MARK: Subviews
+    // MARK: - Subviews
 
-    /// Container UIScrollView
-    public let scrollView = Factory.scrollView
+    /// Wrapped `UIScrollView`.
+    public let scrollView: UIScrollView
 
-    /// Scrollable content view
+    /// Scrollable content view.
     public var contentView: UIView? {
         didSet {
             oldValue?.removeFromSuperview()
             contentViewTopEqualSuper = nil
             contentViewTopGreaterThanSuper = nil
-            guard let newValue = contentView else { return }
-            contentWrapperView.addSubview(newValue)
-            setupLayout(contentView: newValue)
+            contentViewLeft = nil
+            contentViewRight = nil
+            contentViewBottom = nil
+            if let newValue = contentView {
+                contentWrapperView.addSubview(newValue)
+                setupLayout(contentView: newValue)
+            }
         }
     }
 
     let contentWrapperView = UIView()
 
-    // MARK: Layout
+    // MARK: - Layout configuration
 
-    /// Visible content insets
-    public var visibleContentInsets: UIEdgeInsets {
+    /// If `true`, `contentView` will be stretched to fill visible area.
+    ///
+    /// Default is `true`.
+    public var contentViewStretching = true {
+        didSet { contentWrapperHeight.isActive = contentViewStretching }
+    }
+
+    /// If `true` the content view will be aligned to the bottom of scrollable area.
+    ///
+    /// Default is `false`.
+    ///
+    /// If the `contentViewStretching` is set to `false` this property makes no changes to the alignemnt.
+    public var alignContentToBottom = false {
+        didSet {
+            contentViewTopGreaterThanSuper?.isActive = alignContentToBottom == true
+            contentViewTopEqualSuper?.isActive = alignContentToBottom == false
+        }
+    }
+
+    // MARK: - Touch handling configuration
+
+    /// If `true` touches outside the `contentView` will be handled and allow scrolling.
+    ///
+    /// Default is `true`.
+    public var handlesTouchesOutsideContent = true
+
+    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        if handlesTouchesOutsideContent {
+            return super.hitTest(point, with: event)
+        }
+        if let contentView = contentView, contentView.bounds.contains(convert(point, to: contentView)) {
+            return super.hitTest(point, with: event)
+        }
+        return nil
+    }
+
+    // MARK: - Internals
+
+    var visibleContentInsets: UIEdgeInsets {
         get {
-            return UIEdgeInsets(
+            UIEdgeInsets(
                 top: visibleContentLayoutGuideTop.constant,
                 left: visibleContentLayoutGuideLeft.constant,
                 bottom: -visibleContentLayoutGuideBottom.constant,
@@ -55,35 +95,7 @@ public class ScrollWrapperView: UIView {
         }
     }
 
-    // Visible content layout guide
-    public let visibleContentLayoutGuide = UILayoutGuide()
-
-    // If true (default), contentView will be stretched to fill visible space
-    public var contentViewStretching = true {
-        didSet { contentWrapperHeight.isActive = contentViewStretching }
-    }
-
-    // If true (defualt is false) the content view will be aligned to the bottom of scrollable area
-    public var alignContentToBottom = false {
-        didSet {
-            contentViewTopGreaterThanSuper?.isActive = alignContentToBottom == true
-            contentViewTopEqualSuper?.isActive = alignContentToBottom == false
-        }
-    }
-
-    // If true (default) touches outside the content view will be handled and allow scrolling
-    public var handlesTouchesOutsideContent = true
-
-    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        if handlesTouchesOutsideContent {
-            return super.hitTest(point, with: event)
-        }
-        if let contentView = contentView, contentView.bounds.contains(convert(point, to: contentView)) {
-            return super.hitTest(point, with: event)
-        }
-        return nil
-    }
-
+    private let visibleContentLayoutGuide = UILayoutGuide()
     private var visibleContentLayoutGuideTop: NSLayoutConstraint!
     private var visibleContentLayoutGuideLeft: NSLayoutConstraint!
     private var visibleContentLayoutGuideRight: NSLayoutConstraint!
@@ -91,37 +103,53 @@ public class ScrollWrapperView: UIView {
     private var contentWrapperHeight: NSLayoutConstraint!
     private var contentViewTopEqualSuper: NSLayoutConstraint?
     private var contentViewTopGreaterThanSuper: NSLayoutConstraint?
+    private var contentViewLeft: NSLayoutConstraint?
+    private var contentViewRight: NSLayoutConstraint?
+    private var contentViewBottom: NSLayoutConstraint?
 
     private func setupLayout() {
-        addLayoutGuide(visibleContentLayoutGuide)
-        visibleContentLayoutGuideTop = visibleContentLayoutGuide.topAnchor.constraint(equalTo: topAnchor)
-        visibleContentLayoutGuideLeft = visibleContentLayoutGuide.leftAnchor.constraint(equalTo: leftAnchor)
-        visibleContentLayoutGuideRight = visibleContentLayoutGuide.rightAnchor.constraint(equalTo: rightAnchor)
-        visibleContentLayoutGuideBottom = visibleContentLayoutGuide.bottomAnchor.constraint(equalTo: bottomAnchor)
-        visibleContentLayoutGuideTop.isActive = true
-        visibleContentLayoutGuideLeft.isActive = true
-        visibleContentLayoutGuideRight.priority = .defaultHigh
-        visibleContentLayoutGuideRight.isActive = true
-        visibleContentLayoutGuideBottom.priority = .defaultHigh
-        visibleContentLayoutGuideBottom.isActive = true
+        setupVisibleContentLayoutGuide()
+        setupScrollViewLayout()
+        setupContentWrapperViewLayout()
+    }
 
+    private func setupScrollViewLayout() {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         scrollView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    }
 
+    private func setupContentWrapperViewLayout() {
         contentWrapperView.translatesAutoresizingMaskIntoConstraints = false
         contentWrapperView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
         contentWrapperView.leftAnchor.constraint(equalTo: scrollView.leftAnchor).isActive = true
         contentWrapperView.rightAnchor.constraint(equalTo: scrollView.rightAnchor).isActive = true
         contentWrapperView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         contentWrapperView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-
         contentWrapperHeight = contentWrapperView.heightAnchor.constraint(
             greaterThanOrEqualTo: visibleContentLayoutGuide.heightAnchor
         )
         contentWrapperHeight.isActive = contentViewStretching
+    }
+
+    private func setupVisibleContentLayoutGuide() {
+        addLayoutGuide(visibleContentLayoutGuide)
+
+        visibleContentLayoutGuideTop = visibleContentLayoutGuide.topAnchor.constraint(equalTo: topAnchor)
+        visibleContentLayoutGuideTop.isActive = true
+
+        visibleContentLayoutGuideLeft = visibleContentLayoutGuide.leftAnchor.constraint(equalTo: leftAnchor)
+        visibleContentLayoutGuideLeft.isActive = true
+
+        visibleContentLayoutGuideRight = visibleContentLayoutGuide.rightAnchor.constraint(equalTo: rightAnchor)
+        visibleContentLayoutGuideRight.priority = .defaultHigh
+        visibleContentLayoutGuideRight.isActive = true
+
+        visibleContentLayoutGuideBottom = visibleContentLayoutGuide.bottomAnchor.constraint(equalTo: bottomAnchor)
+        visibleContentLayoutGuideBottom.priority = .defaultHigh
+        visibleContentLayoutGuideBottom.isActive = true
     }
 
     private func setupLayout(contentView view: UIView) {
@@ -133,19 +161,13 @@ public class ScrollWrapperView: UIView {
         contentViewTopGreaterThanSuper = view.topAnchor.constraint(greaterThanOrEqualTo: contentWrapperView.topAnchor)
         contentViewTopGreaterThanSuper?.isActive = alignContentToBottom == true
 
-        view.leftAnchor.constraint(equalTo: contentWrapperView.leftAnchor).isActive = true
-        view.rightAnchor.constraint(equalTo: contentWrapperView.rightAnchor).isActive = true
-        view.bottomAnchor.constraint(equalTo: contentWrapperView.bottomAnchor).isActive = true
-    }
+        contentViewLeft = view.leftAnchor.constraint(equalTo: contentWrapperView.leftAnchor)
+        contentViewLeft?.isActive = true
 
-}
+        contentViewRight = view.rightAnchor.constraint(equalTo: contentWrapperView.rightAnchor)
+        contentViewRight?.isActive = true
 
-private extension ScrollWrapperView {
-    struct Factory {
-        static var scrollView: UIScrollView {
-            let view = UIScrollView(frame: .zero)
-            view.keyboardDismissMode = .interactive
-            return view
-        }
+        contentViewBottom = view.bottomAnchor.constraint(equalTo: contentWrapperView.bottomAnchor)
+        contentViewBottom?.isActive = true
     }
 }

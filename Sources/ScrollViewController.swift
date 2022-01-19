@@ -1,18 +1,17 @@
 import UIKit
 
-/// Scroll View Controller
-public class ScrollViewController: UIViewController, UIScrollViewDelegate {
-
-    /// Animates using provided duration and closure
+/// Scroll View Controller.
+public final class ScrollViewController: UIViewController, UIScrollViewDelegate {
+    /// Animates using provided duration and closure.
     public typealias Animator = (TimeInterval, @escaping () -> Void) -> Void
 
-    /// Create new instance
+    /// Create new instance.
     ///
     /// - Parameters:
-    ///   - keyboardFrameChangeListener: used to observe keybaord frame changes
-    ///   - scrollViewKeyboardAvoider: used to apply keyboard-avoiding insets to UIScrollView
-    ///   - wrapperViewFactory: used to create ScrollWrapperView
-    ///   - animator: closure used to animate views
+    ///   - keyboardFrameChangeListener: Used to observe keybaord frame changes.
+    ///   - scrollViewKeyboardAvoider: Used to apply keyboard-avoiding insets to `UIScrollView`.
+    ///   - wrapperViewFactory: Used to create `ScrollWrapperView`.
+    ///   - animator: Closure used to animate layout changes.
     public init(keyboardFrameChangeListener: KeyboardFrameChangeListening
                     = KeyboardFrameChangeListener(notificationCenter: NotificationCenter.default),
                 scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding
@@ -28,64 +27,60 @@ public class ScrollViewController: UIViewController, UIScrollViewDelegate {
         super.init(nibName: nil, bundle: nil)
     }
 
-    /// Does nothing, class is designed to be used programatically
-    required public init?(coder aDecoder: NSCoder) {
-        return nil
-    }
+    /// Does nothing, this class is designed to be used programmatically.
+    required public init?(coder aDecoder: NSCoder) { nil }
 
-    // MARK: View
+    // MARK: - View
 
-    /// Loads view
     override public func loadView() {
         view = createWrapperView()
     }
 
-    /// Called when view is loaded
     override public func viewDidLoad() {
         super.viewDidLoad()
         wrapperView.scrollView.delegate = self
         keyboardFrameChangeListener.keyboardFrameWillChange = { [unowned self] change in
-            self.scrollViewKeyboardAvoider.handleKeyboardFrameChange(change.frame,
-                                                                     animationDuration: change.animationDuration,
-                                                                     for: self.wrapperView.scrollView)
+            self.scrollViewKeyboardAvoider.handleKeyboardFrameChange(
+                change.frame,
+                animationDuration: change.animationDuration,
+                for: self.wrapperView.scrollView
+            )
             self.updateVisibleContentInset(scrollView: self.wrapperView.scrollView)
-            self.animate(change.animationDuration) { self.wrapperView.layoutIfNeeded() }
+            self.animate(change.animationDuration) {
+                self.wrapperView.layoutIfNeeded()
+            }
         }
     }
 
-    /// Called when view layouts subviews
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateVisibleContentInset(scrollView: wrapperView.scrollView)
     }
 
-    /// Contained UIScrollView
+    /// Contained `UIScrollView`.
     public var scrollView: UIScrollView {
         return wrapperView.scrollView
     }
 
-    /// Scrollable content view
+    /// Scrollable content view.
     public var contentView: UIView? {
         get { return wrapperView.contentView }
         set { wrapperView.contentView = newValue }
     }
 
-    /// Main view of this view controller (non-scrollable)
+    /// Main view of this view controller (non-scrollable).
     public var wrapperView: ScrollWrapperView! {
         return view as? ScrollWrapperView
     }
 
-    // MARK: UIScrollViewDelegate
+    // MARK: - UIScrollViewDelegate
 
-    /// Called when UIScrollView changes adjusted content inset
-    ///
-    /// - Parameter scrollView: UIScrollView that changed adjusted content inset
     @available(iOS 11.0, *)
     public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
         updateVisibleContentInset(scrollView: scrollView)
     }
 
-    // MARK: Private
+    // MARK: - Internals
 
     private let keyboardFrameChangeListener: KeyboardFrameChangeListening
     private let scrollViewKeyboardAvoider: ScrollViewKeyboardAvoiding
@@ -99,5 +94,4 @@ public class ScrollViewController: UIViewController, UIScrollViewDelegate {
             wrapperView.visibleContentInsets = scrollView.contentInset
         }
     }
-
 }

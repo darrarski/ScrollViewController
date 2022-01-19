@@ -1,9 +1,9 @@
 import CoreGraphics
 import Foundation
 
-/// Represents keyboard frame change
+/// Represents keyboard frame change.
 public struct KeyboardFrameChange {
-    /// Create new frame-change object
+    /// Create new frame-change object.
     ///
     /// - Parameters:
     ///   - frame: new keyboard frame
@@ -13,9 +13,9 @@ public struct KeyboardFrameChange {
         self.animationDuration = animationDuration
     }
 
-    /// New keyboard frame
+    /// New keyboard frame.
     public let frame: CGRect
 
-    /// Change frame animation duration
+    /// Frame change animation duration.
     public let animationDuration: TimeInterval
 }

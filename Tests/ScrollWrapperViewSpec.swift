@@ -2,8 +2,7 @@ import Quick
 import Nimble
 @testable import ScrollViewController
 
-class ScrollWrapperViewSpec: QuickSpec {
-
+final class ScrollWrapperViewSpec: QuickSpec {
     override func spec() {
         describe("ScrollWrapperView") {
             var sut: ScrollWrapperView!
@@ -131,5 +130,4 @@ class ScrollWrapperViewSpec: QuickSpec {
             }
         }
     }
-
 }
